@@ -1,0 +1,29 @@
+﻿capital = 486
+
+oob = "PAN_1936"
+
+recruit_character = PAN_harmodio_arias_madrid
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+}
+
+add_ideas = {
+	ZIRD_the_void
+}
+
+set_war_support = 0.1
+set_convoys = 0
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.6.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
+}
+

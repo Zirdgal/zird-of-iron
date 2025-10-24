@@ -1,0 +1,1801 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+
+
+focus_tree = { 
+	id = danish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = DEN
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 150 y = 1500 }
+
+##################
+##################
+#### INDUSTRY ####
+##################
+##################
+
+	focus = {
+		id = DEN_kanslergadeforliget
+		icon = GFX_focus_generic_treaty
+	
+		mutually_exclusive = { focus = DEN_fortify_our_borders }
+	
+		x = 3
+		y = 0
+	
+		cost = 5
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			DEN_bop_low_decrease_effect = yes
+
+			add_to_variable = { DEN_economic_crisis_democratic_drift = 0.05 }
+			custom_effect_tooltip = DEN_the_Kanslergadeforlig_modifier_tt
+
+			add_to_variable = { DEN_industrial_improvement_tracker_var = 1 }
+			DEN_improve_industrial_capabilities_NS = yes
+			add_to_variable = {
+				DEN_industrial_capabilities_consumer_goods = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = DEN_karl_kristian_steincke	
+		}
+	}
+	
+	focus = {
+		id = DEN_devalue_the_krone
+		icon = GFX_focus_DEN_devalue_krone
+	
+		prerequisite = { focus = DEN_kanslergadeforliget focus = DEN_fortify_our_borders }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_kanslergadeforliget
+		x = 1
+		y = 1
+	
+		cost = 5
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+	
+		ai_will_do = {
+		} 
+	
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_stability = -0.05
+
+			add_to_variable = { DEN_industrial_improvement_tracker_var = 1 }
+			DEN_improve_industrial_capabilities_NS = yes
+			add_to_variable = {
+				DEN_industrial_capabilities_consumer_goods = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			
+			add_to_variable = { DEN_economic_crisis_stability_weekly = 0.001 }
+			custom_effect_tooltip = DEN_devalue_the_krone_modifier_tt
+
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = DEN_economic_crisis_dynamic_modifier }
+				add_dynamic_modifier = { modifier = DEN_economic_crisis_dynamic_modifier days = 730 }
+			}
+			custom_effect_tooltip = DEN_remove_economic_crisis_in_730_days_tt
+		}
+	}
+	
+	focus = {
+		id = DEN_trade_with_britain
+		 icon = GFX_focus_generic_british_trade
+	
+		prerequisite = { focus = DEN_devalue_the_krone }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_devalue_the_krone
+		x = -1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			NOT = {
+				has_war_with = ENG
+			}
+			is_subject = no
+			ENG = {
+				exists = yes
+			}
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			ENG = { country_event = { id = denmark_trade_deal.1 days = 1 } }
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = 1 }
+					DEN_trade_deal_effects = yes					
+				}
+				ENG = {
+					add_ideas = DEN_danish_produce_export_ns
+				}
+			}
+			custom_effect_tooltip = war_will_cancel_deal_tt
+			unlock_decision_category_tooltip = DEN_trade_deal_category
+		}
+	}
+	
+	focus = {
+		id = DEN_trade_with_germany
+		icon = GFX_focus_generic_german_trade
+	
+		prerequisite = { focus = DEN_devalue_the_krone }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_devalue_the_krone
+		x = 1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			NOT = {
+				has_war_with = GER
+			}
+			is_subject = no
+			GER = {
+				exists = yes
+			}
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			GER = { country_event = { id = denmark_trade_deal.1 days = 1 } }
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = 1 }
+					DEN_trade_deal_effects = yes
+				}
+				GER = {
+					add_ideas = DEN_danish_produce_export_ns
+				}
+			}
+			custom_effect_tooltip = war_will_cancel_deal_tt
+			unlock_decision_category_tooltip = DEN_trade_deal_category
+		}
+	}
+	
+	focus = {
+		id = DEN_agricultural_subsidies
+		icon = GFX_focus_generic_agricultural_subsidies
+	
+		prerequisite = { focus = DEN_kanslergadeforliget }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_kanslergadeforliget
+		x = -3
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			add_to_variable = { DEN_economic_crisis_monthly_population = 0.1 }
+			custom_effect_tooltip = DEN_agricultural_subsidies_modifier_tt
+
+			add_ideas = DEN_danish_produce_ns
+
+			if = {
+				limit = {
+					99 = { #Norrejylland
+						is_fully_controlled_by = ROOT
+					}
+				}
+				99 = { 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_development_projects_mainland_state_modifier
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 37 911 } 
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_industrial_investments
+		icon = GFX_goal_generic_construct_civilian
+	
+		prerequisite = { focus = DEN_kanslergadeforliget }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_kanslergadeforliget
+		x = -1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			if = {
+				limit = {
+					37 = { #Sjaelland
+						is_fully_controlled_by = ROOT
+					}
+				}
+				37 = { 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_development_projects_mainland_state_modifier
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 911 99 } 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_support_schleswigian_farmers
+		icon = GFX_focus_DEN_schleswigian_farmers
+	
+		prerequisite = { focus = DEN_agricultural_subsidies }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_kanslergadeforliget
+		x = -3
+		y = 3
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			912 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			add_to_variable = { DEN_economic_crisis_neutrality_drift = -0.02 }
+			custom_effect_tooltip = DEN_schleswigian_farmers_modifier_tt
+
+			#DEN_remove_economic_crisis = yes
+
+			swap_ideas = { 
+				remove_idea = DEN_danish_produce_ns
+				add_idea = DEN_danish_produce_improved
+			}
+
+			if = {
+				limit = {
+					912 = { #Sonderjylland
+						is_fully_controlled_by = ROOT
+					}
+				}
+				912 = { 
+					add_extra_state_shared_building_slots = 2
+					add_dynamic_modifier = {
+						modifier = DEN_development_projects_mainland_state_modifier
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					prioritize = { 99 911 37 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_public_works
+		icon = GFX_goal_generic_construction
+	
+		prerequisite = { focus = DEN_agricultural_subsidies focus = DEN_industrial_investments }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_kanslergadeforliget
+		x = -1
+		y = 3
+	
+		cost = 10
+	
+		bypass = {
+			NOT = {	has_full_control_of_state = 37 }
+			NOT = {	has_full_control_of_state = 911 }
+		}
+	
+		available = {
+			OR = {
+				has_full_control_of_state = 37
+				has_full_control_of_state = 911
+			}
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			if = {
+				limit = {
+					37 = { #Sjaelland
+						is_fully_controlled_by = ROOT
+					}
+				}
+				37 = { 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = {
+					911 = { #Fyn
+						is_fully_controlled_by = ROOT
+					}
+				}
+				911 = { 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_development_projects_mainland_state_modifier
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_fortify_our_borders
+		icon = GFX_focus_generic_fortify_denmark
+	
+		prerequisite = {}
+		mutually_exclusive = { focus = DEN_kanslergadeforliget }
+	
+		relative_position_id = DEN_kanslergadeforliget
+		x = 2
+		y = 0
+	
+		cost = 5
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_POLITICAL_CHARACTER }
+	
+		completion_reward = {
+			DEN_bop_low_increase_effect = yes
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = DEN_alsing_andersen	
+		}
+	}
+	
+	focus = {
+		id = DEN_build_a_modern_dannevirke
+		icon = GFX_goal_generic_construct_military
+	
+		prerequisite = { focus = DEN_fortify_our_borders }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_fortify_our_borders
+		x = 1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			
+			custom_effect_tooltip = DEN_unlocks_fortification_efforts #This will reduce tooltip clutter
+
+			if = {
+				limit = {
+					ROOT = { is_subject = no }
+					912 = { 
+						is_fully_controlled_by = ROOT
+					}
+				}
+				912 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_military_projects_state_modifier
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { is_subject = no }
+					99 = { 
+						is_fully_controlled_by = ROOT
+					}
+				}
+				99 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 37 911 } 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_refortify_tunestillingen
+		icon = GFX_goal_generic_fortify_city
+	
+		prerequisite = { focus = DEN_fortify_our_borders }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_fortify_our_borders
+		x = 3
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+
+			if = {
+				limit = {
+					ROOT = { is_subject = no }
+					37 = { 
+						is_fully_controlled_by = ROOT
+					}
+				}
+				37 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_military_projects_state_modifier
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 37 911 99 } 
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_secure_our_supply_lines
+		icon = GFX_focus_generic_supply_line
+	
+		prerequisite = { focus = DEN_refortify_tunestillingen }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_fortify_our_borders
+		x = 3
+		y = 3
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+		
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	
+		completion_reward = {
+
+			add_to_variable = { DEN_economic_crisis_monthly_population = 0.1 }
+			add_to_variable = { DEN_economic_crisis_democratic_drift = 0.05 }
+			custom_effect_tooltip = DEN_secure_our_supply_lines_modifier_tt
+
+			#DEN_remove_economic_crisis = yes
+
+			add_ideas = DEN_improved_logistics
+
+			if = {
+				limit = {
+					99 = { #Jylland
+						is_fully_controlled_by = ROOT
+					}
+				}
+				99 = { 
+					add_extra_state_shared_building_slots = 2
+					add_dynamic_modifier = {
+						modifier = DEN_military_projects_state_modifier
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+					}
+					prioritize = { 37 911 } 
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = DEN_fortify_the_islands
+		icon = GFX_focus_generic_coastal_fort
+	
+		prerequisite = { focus = DEN_build_a_modern_dannevirke focus = DEN_refortify_tunestillingen }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_fortify_our_borders
+		x = 1
+		y = 3
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			any_core_state =  {
+				is_controlled_by = ROOT 
+				is_coastal = yes
+			}
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+
+			custom_effect_tooltip = DEN_unlocks_coastal_fortification_efforts #This will reduce tooltip clutter
+
+			if = {
+				limit = {
+					ROOT = { is_subject = no }
+					37 = { 
+						is_fully_controlled_by = ROOT
+					}
+				}
+				37 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = { all_provinces = yes }
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_subject = no }
+					911 = { 
+						is_fully_controlled_by = ROOT
+					}
+				}
+				911 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = { all_provinces = yes }
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_military_projects_state_modifier
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 37 911 99 } 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_connect_the_islands
+		icon = GFX_goal_generic_construct_infrastructure
+	
+		prerequisite = { focus = DEN_public_works focus = DEN_fortify_the_islands }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_kanslergadeforliget
+		x = 1
+		y = 4
+	
+		cost = 10
+	
+		bypass = {
+			NOT = { has_full_control_of_state = 37 }
+			NOT = {	has_full_control_of_state = 911 }
+			NOT = {	has_full_control_of_state = 99 }
+			NOT = {	has_full_control_of_state = 912 }
+		}
+	
+		available = {
+			OR = {
+				has_full_control_of_state = 37
+				has_full_control_of_state = 911
+				has_full_control_of_state = 99
+				has_full_control_of_state = 912
+			}
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			if = {
+				limit = {
+					37 = { #Sjaelland
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				37 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = { add_cic = 2000 }
+			if = {
+				limit = {
+					911 = { #Fyn
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				911 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = { add_cic = 2000 }
+			if = {
+				limit = {
+					99 = { #Norrejylland
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				99 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = { add_cic = 2000 }
+			if = {
+				limit = {
+					912 = { #Sondrejylland
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				912 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = { add_cic = 2000 }
+		}
+	}
+
+	focus = {
+		id = DEN_expand_institut_for_teoretisk_fysik
+		icon = GFX_focus_research
+	
+		prerequisite = { focus = DEN_connect_the_islands }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_connect_the_islands
+		x = -3
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+		
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			add_research_slot = 1
+
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = DEN_expand_institut_for_teoretisk_fysik
+					bonus = 0.25 # was 0.5
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = {
+				localization_key = available_scientist_one_line_tt
+				CHARACTER = DEN_niels_bohr
+			}	
+			
+		}
+	}
+
+	focus = {
+		id = DEN_expand_the_industries
+		icon = GFX_goal_generic_construct_civ_factory
+	
+		prerequisite = { focus = DEN_expand_institut_for_teoretisk_fysik }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_expand_institut_for_teoretisk_fysik
+		x = -1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+			
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			custom_effect_tooltip = DEN_develop_remote_islands
+
+			random_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 37 911 99 912 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { DEN_industrial_improvement_tracker_var = 2 }
+			DEN_improve_industrial_capabilities_NS = yes
+			add_to_variable = { 
+				DEN_industrial_capabilities_retention_efficiency = 0.025
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = {
+				DEN_industrial_capabilities_factory_output = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				DEN_industrial_capabilities_dockyard_output = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = { 
+				DEN_industrial_capabilities_equipment_conversion = 0.025
+				tooltip = equipment_conversion_speed_tt
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_aalborg_portland_cement_plant
+		icon = GFX_goal_generic_construction
+	
+		prerequisite = { focus = DEN_expand_institut_for_teoretisk_fysik }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_expand_institut_for_teoretisk_fysik
+		x = 1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+		
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			custom_effect_tooltip = DEN_improve_aalborg_portland_tt
+			DEN_replaced_designers_with_improved_version = yes
+
+			add_tech_bonus = {
+				name = DEN_aalborg_portland_cement_plant
+				bonus = 0.75
+				uses = 1
+				category = construction_tech
+			}
+			add_tech_bonus = {
+				name = DEN_aalborg_portland_cement_plant
+				bonus = 0.75
+				uses = 1
+				category = excavation_tech
+			}
+
+			if = { limit = { 99 = { is_fully_controlled_by = ROOT } }
+				99 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 912 911 37 } 
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_support_the_faroes_industries
+		icon = GFX_focus_DEN_develop_faroes
+	
+		prerequisite = { focus = DEN_expand_the_industries focus = DEN_aalborg_portland_cement_plant }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_expand_institut_for_teoretisk_fysik
+		x = -1
+		y = 2
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			337 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			337 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_dynamic_modifier = {
+					modifier = DEN_development_projects_state_modifier
+				}
+			}
+		}
+	}
+	focus = {
+		id = DEN_support_bornholms_industries
+		icon = GFX_focus_DEN_develop_bornholm
+	
+		prerequisite = { focus = DEN_expand_the_industries focus = DEN_aalborg_portland_cement_plant }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_expand_institut_for_teoretisk_fysik
+		x = 1
+		y = 2
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			910 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			910 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_dynamic_modifier = {
+					modifier = DEN_development_projects_state_modifier
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_develop_greenland
+		icon = GFX_focus_DEN_develop_greenland
+	 
+		prerequisite = { focus = DEN_connect_the_islands }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_connect_the_islands
+		x = 0
+		y = 3
+	
+		cost = 5
+	
+		bypass = {
+		}
+	
+		available = {
+			101 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			if = { 
+				limit = { 101 = { is_fully_controlled_by = ROOT } }
+				101 = {
+					add_extra_state_shared_building_slots = 1
+					add_dynamic_modifier = {
+						modifier = DEN_development_projects_state_modifier
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_expand_the_ivittuut_mine
+		icon = GFX_focus_DEN_expand_ivittuut_mine
+	
+		prerequisite = { focus = DEN_develop_greenland }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_develop_greenland
+		x = -1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			101 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			if = { 
+				limit = { 101 = { is_fully_controlled_by = ROOT } }
+				101 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = aluminium
+						amount = 10
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_prospecting_new_sites
+		icon = GFX_focus_DEN_prospecting_greenland
+	
+		prerequisite = { focus = DEN_develop_greenland }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_develop_greenland
+		x = 1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			101 = { is_fully_controlled_by = ROOT }
+			has_tech = excavation3
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+
+			unlock_decision_tooltip = expand_greenlands_mines
+
+			if = { 
+				limit = { 101 = { is_fully_controlled_by = ROOT } }
+				101 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 12
+					}
+					add_resource = {
+						type = chromium
+						amount = 6
+					}
+					add_resource = {
+						type = tungsten
+						amount = 6
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_protect_greenland
+		icon = GFX_focus_DEN_protect_greenland
+	
+		prerequisite = { focus = DEN_prospecting_new_sites focus = DEN_expand_the_ivittuut_mine }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_develop_greenland
+		x = 0
+		y = 2
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			101 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			if = { 
+				limit = { 101 = { is_fully_controlled_by = ROOT } }
+				101 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 12512
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_military_projects_state_modifier
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_reorient_production_lines
+		icon = GFX_focus_generic_reorient_production
+		
+		prerequisite = { focus = DEN_connect_the_islands }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_connect_the_islands
+		x = 3
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			random_core_state = {
+				prioritize = { 37 911 99 } 
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { DEN_industrial_improvement_tracker_var = 2 }
+			DEN_improve_industrial_capabilities_NS = yes
+			add_to_variable = { 
+				DEN_industrial_capabilities_retention_efficiency = 0.05
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = {
+				DEN_industrial_capabilities_factory_output = 0.025
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				DEN_industrial_capabilities_dockyard_output = 0.025
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = { 
+				DEN_industrial_capabilities_equipment_conversion = 0.05
+				tooltip = equipment_conversion_speed_tt
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_danske_stalvalsevaerket
+		icon = GFX_focus_generic_steel
+	
+		prerequisite = { focus = DEN_reorient_production_lines }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_reorient_production_lines
+		x = -1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+		}
+		
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+
+			custom_effect_tooltip = DEN_unlock_stalvalsevaerket_tt
+			
+			add_tech_bonus = {
+				name = DEN_danske_stalvalsevaerket
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+
+			if = { 
+				limit = { 37 = { is_fully_controlled_by = ROOT } }
+				37 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 12
+					}
+				}
+			}
+			else = {
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 911 99 912 } 
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 4
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_strengthen_military_industries
+		icon = GFX_goal_generic_construct_mil_factory
+	
+		prerequisite = { focus = DEN_reorient_production_lines }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_reorient_production_lines
+		x = 1
+		y = 1
+	
+		cost = 10
+	
+		bypass = {
+
+		}
+	
+		available = {
+		}
+			
+		available_if_capitulated = yes
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			random_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 37 911 99 912 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 911 99 912 37 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_to_variable = { DEN_industrial_improvement_tracker_var = 2 }
+			DEN_improve_industrial_capabilities_NS = yes
+			add_to_variable = { 
+				DEN_industrial_capabilities_retention_efficiency = 0.025
+				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = {
+				DEN_industrial_capabilities_factory_output = 0.025
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = {
+				DEN_industrial_capabilities_dockyard_output = 0.025
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = { 
+				DEN_industrial_capabilities_equipment_conversion = 0.025
+				tooltip = equipment_conversion_speed_tt
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_protect_the_faroe_islands
+		icon = GFX_focus_DEN_protect_faroes
+
+		prerequisite = { focus = DEN_danske_stalvalsevaerket focus = DEN_strengthen_military_industries }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_reorient_production_lines
+		x = -1
+		y = 2
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			337 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			if = { 
+				limit = { 337 = { is_fully_controlled_by = ROOT } }
+				337 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 13003
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = { all_provinces = yes }
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_military_projects_state_modifier
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEN_protect_bornholm
+		icon = GFX_focus_DEN_protect_bornholm
+	
+		prerequisite = { focus = DEN_danske_stalvalsevaerket focus = DEN_strengthen_military_industries }
+		mutually_exclusive = {}
+	
+		relative_position_id = DEN_reorient_production_lines
+		x = 1
+		y = 2
+	
+		cost = 10
+	
+		bypass = {
+		}
+	
+		available = {
+			910 = { is_fully_controlled_by = ROOT }
+		}
+	
+		ai_will_do = {
+		}
+	
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		completion_reward = {
+			if = { 	
+				limit = { 910 = { is_fully_controlled_by = ROOT } }
+				910 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 6361
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+					add_dynamic_modifier = {
+						modifier = DEN_military_projects_state_modifier
+					}
+				}
+			}
+		}
+	}
+
+}

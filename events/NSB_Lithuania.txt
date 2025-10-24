@@ -1,0 +1,106 @@
+﻿###########################
+# Lithuanian Events
+###########################
+
+add_namespace = LIT_events
+
+# SOV-LIT partition of Poland
+country_event = {
+	id = LIT_events.1
+	title = LIT_events.1.t
+	desc = LIT_events.1.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Sounds fair.
+		name = LIT_events.1.a
+		ai_chance = {
+			factor = 10
+		}
+		effect_tooltip = { POL = { country_event = { days = 1 id = LIT_events.101 } } }
+		if = {
+			limit = {
+				96 = {
+					is_controlled_by = POL
+					NOT = { is_claimed_by = SOV }
+				}
+			}
+			96 = { add_claim_by = SOV }
+		}
+		if = {
+			limit = {
+				95 = {
+					is_controlled_by = POL
+					NOT = { is_claimed_by = SOV }
+				}
+			}
+			95 = { add_claim_by = SOV }
+		}
+		if = {
+			limit = {
+				94 = {
+					is_controlled_by = POL
+					NOT = { is_claimed_by = SOV }
+				}
+			}
+			94 = { add_claim_by = SOV }
+		}
+		if = {
+			limit = {
+				93 = {
+					is_controlled_by = POL
+					NOT = { is_claimed_by = SOV }
+				}
+			}
+			93 = { add_claim_by = SOV }
+		}
+		if = {
+			limit = {
+				91 = {
+					is_controlled_by = POL
+					NOT = { is_claimed_by = SOV }
+				}
+			}
+			91 = { add_claim_by = SOV }
+		}
+		if = {
+			limit = {
+				97 = {
+					is_controlled_by = POL
+					NOT = { is_claimed_by = SOV }
+				}
+			}
+			97 = { add_claim_by = SOV }
+		}
+		if = {
+			limit = {
+				89 = {
+					is_controlled_by = POL
+					NOT = { is_claimed_by = SOV }
+				}
+			}
+			89 = { add_claim_by = SOV }
+		}
+		hidden_effect = {
+			FROM = { country_event = { days = 1 id = LIT_events.102 } }
+		}
+	}
+	option = { #Nah
+		name = LIT_events.1.b
+		ai_chance = {
+			base = 1
+			modifier = { #Please don't listen to the AI, ok?
+				factor = 5 
+				FROM = { is_ai = yes }
+			}
+			modifier = { #Please don't kill the player, maybe
+				factor = 10
+				POL = { is_ai = no } 
+			} 
+
+		}
+		FROM = { country_event = { days = 1 id = LIT_events.103 } }
+	}
+}

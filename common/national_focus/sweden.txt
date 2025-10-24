@@ -1,0 +1,24 @@
+focus_tree = {
+	id = sweden_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SWE
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 100 y = 50 }
+
+	initial_show_position = {
+		x = 0
+		y = 0
+	}
+
+
+}
+

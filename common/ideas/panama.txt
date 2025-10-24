@@ -1,0 +1,37 @@
+ideas = {
+
+    country {
+        ZIRD_the_void {
+			name = ZIRD_the_void_idea
+			allowed = {
+				original_tag = PAN
+			}
+
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+
+			modifier = {
+                agency_upgrade_time = 100.0
+				consumer_goods_factor = 100.0
+				production_speed_buildings_factor = -100.0
+				production_speed_arms_factory_factor = -100.0
+				production_speed_dockyard_factor = -100.0
+				production_speed_naval_base_factor = -100.0
+				production_speed_coastal_bunker_factor = -100.0
+				production_speed_bunker_factor = -100.0
+				production_speed_air_base_factor = -100.0
+				production_speed_anti_air_building_factor = -100.0
+				production_speed_radar_station_factor = -100.0
+				production_speed_fuel_silo_factor = -100.0
+				production_speed_synthetic_refinery_factor = -100.0
+				political_power_cost = 1000.0
+                operative_slot = -67
+                enemy_justify_war_goal_time = 1000.0
+                send_volunteers_tension = 1000.0
+                industrial_capacity_factory = -100.0
+                industrial_capacity_dockyard = -100.0
+			}
+        }
+    }
+}

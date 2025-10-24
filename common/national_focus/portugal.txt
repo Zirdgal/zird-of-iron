@@ -1,0 +1,1535 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = portuguese_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = POR
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = POR_colonial_assimilation_policy
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {
+		}
+
+		icon = GFX_focus_generic_military_academy
+		x = 2
+		y = 0
+
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = POR_colonial_assimilation_policy
+		}
+	}
+	
+	focus = {
+		id = POR_colonial_army
+		available = {
+			any_owned_state = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_colonial_assimilation_policy }
+
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+
+		relative_position_id = POR_colonial_assimilation_policy
+		cost = 10
+		search_filters = {FOCUS_FILTER_MANPOWER}
+		completion_reward = {
+			add_ideas = POR_colonial_army
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_francisco_craveiro_lopes
+		}
+	}
+
+	focus = {
+		id = POR_luso_tropicalism
+		available = {
+			NOT = { has_government = fascism }
+			OR = {
+				has_full_control_of_state = 796 #North Angola
+				has_full_control_of_state = 540 #Luanda
+				has_full_control_of_state = 891 #South West Angola
+				has_full_control_of_state = 892 #Zambesi
+				has_full_control_of_state = 544 #Mozambique
+				has_full_control_of_state = 896 #Manica e Sofala
+				has_full_control_of_state = 897 #Zambeziá-Mozambique
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				add = 1
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_colonial_assimilation_policy }
+		mutually_exclusive = { focus = POR_limited_self_rule }
+			
+		icon = GFX_focus_por_luso_tropicalism
+		x = -2
+		y = 2
+
+		relative_position_id = POR_colonial_assimilation_policy
+		cost = 10
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			unlock_decision_tooltip = POR_mozambique_overseas_territory
+			unlock_decision_tooltip = POR_angola_overseas_province
+		}
+	}
+
+	focus = {
+		id = POR_limited_self_rule
+		available = {
+			OR = {
+				has_full_control_of_state = 796 #North Angola
+				has_full_control_of_state = 540 #Luanda
+				has_full_control_of_state = 891 #Zambesi
+				has_full_control_of_state = 892 #Southwest Angola
+				has_full_control_of_state = 544 #Mozambique
+				has_full_control_of_state = 896 #Manica e Sofala
+				has_full_control_of_state = 897 #Zambezia
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}			
+			}
+			modifier = {
+				add = 1
+				OR = {
+					has_government = democratic
+					any_country = {
+						is_in_faction_with = ROOT
+						is_faction_leader = yes
+						has_government = democratic
+					}
+				}		
+			}
+		}
+
+		bypass = {
+		}
+		prerequisite = { focus = POR_colonial_army }
+		mutually_exclusive = { focus = POR_luso_tropicalism }
+			
+		icon = GFX_focus_por_limited_self_rule
+
+		x = 0
+		y = 1
+
+		relative_position_id = POR_colonial_army
+		cost = 10
+		completion_reward = {
+			add_political_power = 120
+			add_manpower = 30000
+			ANG = {
+				if = {
+					limit = { 
+						POR = { has_full_control_of_state = 796 }
+					}
+					transfer_state = 796
+					POR = { set_country_flag = POR_released_angola_flag }
+				}
+				if = {
+					limit = { 
+						POR = { has_full_control_of_state = 540 }
+					}
+					transfer_state = 540
+					POR = { set_country_flag = POR_released_angola_flag }
+				}
+				if = {
+					limit = { 
+						POR = { has_full_control_of_state = 891 }
+					}
+					transfer_state = 891
+					POR = { set_country_flag = POR_released_angola_flag }
+				}	
+				if = {
+					limit = { 
+						POR = { has_full_control_of_state = 892 }
+					}
+					transfer_state = 892
+					POR = { set_country_flag = POR_released_angola_flag }
+				}							
+			}
+
+			MZB = {
+				if = {
+					limit = { 
+						POR = { has_full_control_of_state = 544 }
+					}
+					transfer_state = 544
+					POR = { set_country_flag = POR_released_mozambique_flag }
+				}	
+				if = {
+					limit = { 
+						POR = { has_full_control_of_state = 896 }
+					}
+					transfer_state = 896
+					POR = { set_country_flag = POR_released_mozambique_flag }
+				}
+				if = {
+					limit = { 
+						POR = { has_full_control_of_state = 897 }
+					}
+					transfer_state = 897
+					POR = { set_country_flag = POR_released_mozambique_flag }
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Man the Guns"
+					}
+				}
+
+				POR = {
+					if = {
+						limit = { has_country_flag = POR_released_angola_flag }
+						set_autonomy = {
+						    target = ANG
+						    autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					if = {
+						limit = { has_country_flag = POR_released_mozambique_flag }
+						set_autonomy = {
+						    target = MZB
+						    autonomy_state = autonomy_integrated_puppet
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_country_flag = POR_released_angola_flag }
+					POR = { puppet = ANG }
+				}
+				if = {
+					limit = { has_country_flag = POR_released_mozambique_flag }
+					POR = { puppet = MZB }
+				}
+			}			
+
+			every_other_country = {
+				limit = { has_government = democratic }
+				add_opinion_modifier = {
+					target = POR
+					modifier = democratic_leanings_good 
+				}
+			}
+
+			if = {
+				limit = {
+					has_completed_focus = POR_allow_free_elections
+				}
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = POR_francisco_da_cunha_leal
+			}
+		}
+	}
+
+	focus = {
+		id = POR_infrastructure_in_angola
+		available = {
+			OR = {
+				has_full_control_of_state = 796
+				796 = {
+					owner = { is_subject_of = ROOT }
+				}
+			}
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_colonial_assimilation_policy }	
+			
+		icon = GFX_focus_generic_africa_infrastructure
+		x = 2
+		y = 0
+
+		relative_position_id = POR_limited_self_rule
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+
+			796 = {		
+				
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 2115
+					instant_build = yes
+				}	
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}					
+				add_extra_state_shared_building_slots = 1	
+			}
+
+			540 = {		
+
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 8248
+					instant_build = yes
+				}	
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}					
+				add_extra_state_shared_building_slots = 1					
+			}				
+		}
+	}
+
+	focus = {
+		id = POR_develop_north_angola
+		available = {	
+			OR = {
+				has_full_control_of_state = 796
+				796 = {
+					owner = { is_subject_of = ROOT }
+				}
+			}					
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_infrastructure_in_angola }
+		prerequisite = { focus = POR_roads_bridges_and_dams }  	
+			
+		icon = GFX_focus_generic_africa_factory
+		x = 0
+		y = 1
+
+		relative_position_id = POR_infrastructure_in_angola
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			796 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_develop_south_angola
+		available = {
+			OR = {
+				has_full_control_of_state = 540
+				540 = {
+					owner = { is_subject_of = ROOT }
+				}
+			}
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_develop_north_angola }	
+			
+		icon = GFX_focus_generic_africa_production
+		x = 0
+		y = 1
+
+		relative_position_id = POR_develop_north_angola
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			540 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 8248
+					instant_build = yes
+				}
+
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+
+				add_resource = {
+					type = rubber
+					amount = 4
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_portuguese_oil
+		available = {
+			OR = {
+				has_full_control_of_state = 796
+				796 = {
+					owner = { is_subject_of = ROOT }
+				}
+			}
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_develop_south_angola }
+				
+		icon = GFX_goal_generic_oil_refinery
+		x = -1
+		y = 1
+
+		relative_position_id = POR_develop_south_angola
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			796 = {
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_develop_mozambique
+		available = {
+			OR = {
+				has_full_control_of_state = 544
+				544 = {
+					owner = { is_subject_of = ROOT }
+				}
+			}
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_develop_south_angola }
+				
+		icon = GFX_focus_generic_africa_naval
+		x = 1
+		y = 1
+
+		relative_position_id = POR_develop_south_angola
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			544 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+			}
+			897 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 2123				
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_continue_the_public_works
+		available = {
+			OR = {
+				has_full_control_of_state = 180 #PORTO
+				has_full_control_of_state = 181 #GUARDA
+				has_full_control_of_state = 795 #SANTAREM
+				has_full_control_of_state = 179 #BEJA
+				has_full_control_of_state = 112 #LISBON
+			}
+		}
+
+		bypass = {		
+		}
+			
+		icon = GFX_focus_generic_industry_2
+		x = 9
+		y = 0
+
+		relative_position_id = POR_colonial_assimilation_policy
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {			
+			if = {
+				limit = { has_full_control_of_state = 180 }
+				180 = {
+					add_extra_state_shared_building_slots = 1	
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+			
+			if = {
+				limit = { has_full_control_of_state = 181 }
+				181 = {
+					add_extra_state_shared_building_slots = 1	
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 795 }
+				795 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}	
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 179 }
+				179 = {
+					add_extra_state_shared_building_slots = 1	
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 1	
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 11805					
+						instant_build = yes
+					}				
+				}
+			}
+
+			add_ideas = POR_improved_production
+		}
+	}
+
+	focus = {
+		id = POR_instituto_superior_tecnico
+		available = {			
+		}
+
+		bypass = {
+		}
+		prerequisite = { focus = POR_continue_the_public_works }	
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+
+		relative_position_id = POR_continue_the_public_works
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 	
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = POR_ogme
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_instituto_superior_tecnico }	
+		icon = GFX_goal_generic_build_airforce
+		x = -1
+		y = 1
+
+		relative_position_id = POR_instituto_superior_tecnico
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = POR_ogme_organization
+				mio:POR_ogme_organization = {
+					add_mio_funds = 500
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ogme
+			}
+		}
+	}
+
+	focus = {
+		id = POR_ogma
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_instituto_superior_tecnico }	
+		icon = GFX_goal_generic_air_production
+		x = 1
+		y = 1
+
+		relative_position_id = POR_instituto_superior_tecnico
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = POR_ogma_organization
+				mio:POR_ogma_organization = {
+					add_mio_funds = 500
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = ogma
+			}
+			
+		}
+	}
+
+	focus = {
+		id = POR_roads_bridges_and_dams
+		available = {	
+			OR = {
+				has_full_control_of_state = 181 #GUARDA
+				has_full_control_of_state = 795 #SANTAREM
+				has_full_control_of_state = 179 #BEJA
+				has_full_control_of_state = 180 #PORTO
+				has_full_control_of_state = 112 #LISBON
+			}			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_instituto_superior_tecnico }	
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 0
+
+		relative_position_id = POR_infrastructure_in_angola
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			if = {
+				limit = { has_full_control_of_state = 181 }
+				181 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 795 }
+				795 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}	
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 179 }
+				179 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 180 }
+				180 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 9817					
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+
+					add_building_construction = {
+						type = industrial_complex
+						level = 1	
+						instant_build = yes
+					}				
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_extraction_industries
+		available = {
+			OR = {
+				has_full_control_of_state = 112
+				has_full_control_of_state = 795
+			}			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_roads_bridges_and_dams }	
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+
+		relative_position_id = POR_roads_bridges_and_dams
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 	
+			if = {
+				limit = { has_full_control_of_state = 112 }	
+				unlock_decision_tooltip = POR_develop_lisbon_tungsten_deposits
+			}
+			if = {
+				limit = { has_full_control_of_state = 795 }
+				unlock_decision_tooltip = POR_develop_santarem_chromium_deposits
+			}			
+		}
+	}
+
+	focus = {
+		id = POR_hydroelectricity
+		available = {
+			OR = {
+				has_full_control_of_state = 180 #PORTO
+				has_full_control_of_state = 181 #GUARDA
+				has_full_control_of_state = 179 #BEJA
+				has_full_control_of_state = 112 #LISBON
+			}			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_extraction_industries }	
+		icon = GFX_focus_generic_hydroelectric_energy
+		x = 0
+		y = 1
+
+		relative_position_id = POR_extraction_industries
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 	
+			hidden_effect = {
+				set_province_name = {
+					id = 11885
+					name = POR_cabril_dam
+				}
+			}
+			add_ideas = POR_hydroelectric_power
+			if = {
+				limit = { has_full_control_of_state = 180 }
+				180 = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1	
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 181 }
+				181 = {
+					add_extra_state_shared_building_slots = 1	
+					add_building_construction = {
+						type = dam
+						level = 1
+						instant_build = yes
+						province = {
+							id = 11885
+						}
+					}
+					custom_effect_tooltip = {
+						localization_key = building_state_modifier|dam
+						INDENT = "    "
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_military_vehicles
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_ogme }	
+
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+
+		relative_position_id = POR_ogme
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 			
+			add_tech_bonus = {
+				name = POR_military_vehicles
+			    bonus = 1.0
+			    uses = 1
+			    category = motorized_equipment
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = POR_portuguese_artillery
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_ogme }	
+
+		icon = GFX_goal_generic_army_artillery
+		x = -2
+		y = 1
+
+		relative_position_id = POR_ogme
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = POR_portuguese_artillery
+			    bonus = 1.0
+			    uses = 1
+			    category = artillery
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 179 }
+				179 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}			
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = POR_fma_organization
+				mio:POR_fma_organization = {
+					add_mio_funds = 500
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = fma
+			}
+			
+		}
+	}
+
+	focus = {
+		id = POR_advanced_artillery
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_portuguese_artillery}
+		prerequisite = { focus = POR_military_research_facilities}	
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 2
+
+		relative_position_id = POR_portuguese_artillery
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 	
+			add_tech_bonus = {
+				name = POR_advanced_artillery
+			    bonus = 1.0
+			    uses = 2
+			    category = artillery
+			}
+
+			add_doctrine_cost_reduction = {
+				name = POR_advanced_artillery
+			    cost_reduction = 0.5
+			    uses = 1
+			    category = land_doctrine
+			    category = naval_doctrine
+			    category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POR_military_research_facilities
+		available = {	
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_military_vehicles focus = POR_portuguese_artillery focus = POR_light_aircraft_focus }	
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+
+		relative_position_id = POR_military_vehicles
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 	
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = POR_armor_focus
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_military_research_facilities}
+		mutually_exclusive = { focus = POR_advanced_light_aircraft}	
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+
+		relative_position_id = POR_military_research_facilities
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		completion_reward = { 	
+			if = {
+				limit = { has_full_control_of_state = 112 }	
+				112 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = POR_armor_focus
+			    bonus = 1.0
+			    uses = 1
+			    category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = POR_mechanized_focus
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_armor_focus}	
+		icon = GFX_goal_generic_build_tank
+		x = 0
+		y = 1
+
+		relative_position_id = POR_armor_focus
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 	
+			add_tech_bonus = {
+				name = POR_mechanized_focus
+			    bonus = 1.0
+			    uses = 1
+			    category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = POR_light_aircraft_focus
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_ogma}	
+		icon = GFX_goal_generic_air_fighter2
+		x = 0
+		y = 1
+
+		relative_position_id = POR_ogma
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = POR_light_aircraft_focus
+			    bonus = 1.0
+			    uses = 1
+			    category = light_air
+			}
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = POR_advanced_light_aircraft
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_light_aircraft_focus}
+		mutually_exclusive = { focus = POR_armor_focus}	
+		icon = GFX_goal_generic_air_bomber
+		x = 0
+		y = 2
+
+		relative_position_id = POR_light_aircraft_focus
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = POR_advanced_light_aircraft
+			    bonus = 1.0
+			    uses = 1
+			    category = light_air
+			}
+			air_experience = 50
+			add_ideas = POR_advanced_light_aircraft
+		}
+	}
+
+	focus = {
+		id = POR_jet_research
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_advanced_light_aircraft}	
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 1
+
+		relative_position_id = POR_advanced_light_aircraft
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 	
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = POR_jet_research
+			    bonus = 1.0
+			    uses = 1
+			    category = jet_technology
+			}
+
+		}
+	}
+
+	focus = {
+		id = POR_industrial_modernization
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_instituto_superior_tecnico }
+		mutually_exclusive = { focus = POR_food_industries}	
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 3
+		y = 1
+
+		relative_position_id = POR_instituto_superior_tecnico
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 	
+			add_tech_bonus = {
+				name = POR_industrial_modernization
+			    bonus = 1.0
+			    uses = 2
+			    category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = POR_a_new_industry
+		available = { 
+			has_tech = advanced_machine_tools			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_industrial_modernization }
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 1
+
+		relative_position_id = POR_industrial_modernization
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+		   if = {
+				limit = { has_full_control_of_state = 112 }
+			    112 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex		
+						level = 1
+						instant_build = yes
+					}				
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 795 }
+				795 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_ideas = POR_a_new_industry
+		}
+	}
+
+	focus = {
+		id = POR_food_industries
+		available = {
+			OR = {
+				has_full_control_of_state = 180
+				has_full_control_of_state = 181
+			}		
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_continue_the_public_works }
+		mutually_exclusive = { focus = POR_industrial_modernization }	
+		icon = GFX_goal_generic_consumer_goods
+		x = 5
+		y = 2
+
+		relative_position_id = POR_continue_the_public_works
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 
+			if = {
+				limit = { has_full_control_of_state = 180 }
+				180 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 181 }
+				181 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = POR_textile_industry
+		available = {
+			OR = {
+				has_full_control_of_state = 179
+				has_full_control_of_state = 112
+			}			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_food_industries }			
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 1
+
+		relative_position_id = POR_food_industries
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = { 	
+			if = {
+				limit = { has_full_control_of_state = 179 }	
+				179 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = { has_full_control_of_state = 795 }
+				795 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex		
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+
+
+}

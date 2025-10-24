@@ -1,0 +1,604 @@
+technologies = {
+	resource_factories = {
+	
+		enable_building = {
+			building = aluminium_factory
+			base_cost = 10800
+			level = 10
+		}
+		enable_building = {
+			building = steel_mill
+			base_cost = 10800
+			level = 10
+		}
+		enable_building = {
+			building = chromium_factory
+			base_cost = 10800
+			level = 10
+		}
+		enable_building = {
+			building = tungsten_factory
+			base_cost = 10800
+			level = 10
+		}
+		
+		path = {
+			leads_to_tech = basic_aluminium_mill
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = basic_steel_mill
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = basic_chromium_mill
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = basic_tungsten_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1936
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 6 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+
+	basic_steel_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = improved_steel_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1937
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = -1 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	improved_steel_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = advanced_steel_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1938
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = -1 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	advanced_steel_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = modern_steel_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1939
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = -1 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	modern_steel_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 3
+			}
+		}
+		
+		research_cost = 1.5
+		start_year = 1940
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = -1 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+
+
+	basic_aluminium_mill = {
+	
+		local_resources_factor = 0.10
+
+		on_research_complete = {	
+			modify_building_resources = {
+				building = aluminium_factory
+				resource = aluminium
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = improved_aluminium_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1937
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 3 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	improved_aluminium_mill = {
+
+		local_resources_factor = 0.10
+
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = aluminium_factory
+				resource = aluminium
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = advanced_aluminium_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1938
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 3 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	advanced_aluminium_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = aluminium_factory
+				resource = aluminium
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = modern_aluminium_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1939
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 3 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	modern_aluminium_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = aluminium_factory
+				resource = aluminium
+				amount = 3
+			}
+		}
+		
+		research_cost = 1.5
+		start_year = 1940
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 3 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+
+
+	basic_chromium_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = chromium_factory
+				resource = chromium
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = improved_chromium_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1937
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 9 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	improved_chromium_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = chromium_factory
+				resource = chromium
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = advanced_chromium_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1938
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 9 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	advanced_chromium_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = chromium_factory
+				resource = chromium
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = modern_chromium_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1939
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 9 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	modern_chromium_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = chromium_factory
+				resource = chromium
+				amount = 3
+			}
+		}
+		
+		research_cost = 1.5
+		start_year = 1940
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 9 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+
+	basic_tungsten_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = tungsten_factory
+				resource = tungsten
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = improved_tungsten_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1937
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 13 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	improved_tungsten_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = tungsten_factory
+				resource = tungsten
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = advanced_tungsten_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1938
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 13 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	advanced_tungsten_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = tungsten_factory
+				resource = tungsten
+				amount = 3
+			}
+		}
+		
+		path = {
+			leads_to_tech = modern_tungsten_mill
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1939
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 13 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+	modern_tungsten_mill = {
+
+		local_resources_factor = 0.10
+	
+		on_research_complete = {	
+
+			modify_building_resources = {
+				building = tungsten_factory
+				resource = tungsten
+				amount = 3
+			}
+		}
+		
+		research_cost = 1.5
+		start_year = 1940
+
+		folder = {
+			name = zird_factory_folder
+			position = { x = 13 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		categories = {
+			industry
+			zird_factory
+		}
+	}
+}
