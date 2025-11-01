@@ -5863,7 +5863,7 @@ focus = {
 		available_if_capitulated = yes
 
 		prerequisite = { focus = ENG_steady_as_she_goes }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_focus_chi_reach_out_to_france
 		x = -3
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
