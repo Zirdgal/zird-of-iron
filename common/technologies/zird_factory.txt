@@ -59,7 +59,7 @@ technologies = {
 
 	basic_steel_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -94,7 +94,7 @@ technologies = {
 	}
 	improved_steel_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -129,7 +129,7 @@ technologies = {
 	}
 	advanced_steel_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -164,7 +164,7 @@ technologies = {
 	}
 	modern_steel_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -196,7 +196,7 @@ technologies = {
 
 	basic_aluminium_mill = {
 	
-		local_resources_factor = 0.10
+		  
 
 		on_research_complete = {	
 			modify_building_resources = {
@@ -230,7 +230,7 @@ technologies = {
 	}
 	improved_aluminium_mill = {
 
-		local_resources_factor = 0.10
+		  
 
 		on_research_complete = {	
 
@@ -265,7 +265,7 @@ technologies = {
 	}
 	advanced_aluminium_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -300,7 +300,7 @@ technologies = {
 	}
 	modern_aluminium_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -332,7 +332,7 @@ technologies = {
 
 	basic_chromium_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -367,7 +367,7 @@ technologies = {
 	}
 	improved_chromium_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -402,7 +402,7 @@ technologies = {
 	}
 	advanced_chromium_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -437,7 +437,7 @@ technologies = {
 	}
 	modern_chromium_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -468,7 +468,7 @@ technologies = {
 
 	basic_tungsten_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -503,7 +503,7 @@ technologies = {
 	}
 	improved_tungsten_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -538,7 +538,7 @@ technologies = {
 	}
 	advanced_tungsten_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
@@ -573,7 +573,7 @@ technologies = {
 	}
 	modern_tungsten_mill = {
 
-		local_resources_factor = 0.10
+		  
 	
 		on_research_complete = {	
 
