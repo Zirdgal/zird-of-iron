@@ -11,7 +11,15 @@ ideas = {
 
 			picture = FRA_matignon_agreements
 
+			rule = {
+				can_join_factions = no
+			}
+
 			modifier = {
+				min_export -100.00
+				local_resources_factor = -100.00
+				join_faction_tension = 100.0
+				send_volunteers_tension = 100.0
                 agency_upgrade_time = 100.0
 				consumer_goods_factor = 100.0
 				production_speed_buildings_factor = -100.0
