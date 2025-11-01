@@ -313,7 +313,7 @@ focus_tree = {
 	focus = {
 		id = uk_tank_discount_focus
 		prerequisite = { focus = ENG_tank_focus }
-		icon = GFX_focus_ARG_the_war_machine
+		icon = GFX_focus_generic_heavy_tank
 		x = 0
 		y = 1
 		relative_position_id = ENG_tank_focus
@@ -2142,7 +2142,7 @@ focus_tree = {
 
 	focus = {
 		id = uk_mediterranean_focus 
-		prerequisite = { focus = uk_foritfy_the_empire_focus }
+		prerequisite = { focus = uk_fortify_the_empire_focus }
 		available = {
 			447 = {
 				CONTROLLER = {
@@ -2153,10 +2153,10 @@ focus_tree = {
 				}
 			}
 		} 
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_generic_mediterranean_sea_focus
 		x = 0
 		y = 1
-		relative_position_id = uk_foritfy_the_empire_focus
+		relative_position_id = uk_fortify_the_empire_focus
 		cost = 5
 		completion_reward = {
 			447 = {
@@ -2223,7 +2223,7 @@ focus_tree = {
 		available = {
 			118 = { is_owned_and_controlled_by = ENG }
 		} 
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 1
 		relative_position_id = uk_rock_focus
@@ -2309,7 +2309,7 @@ focus_tree = {
 		available = {
 			118 = { is_owned_and_controlled_by = ENG }
 		} 
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_FIN_coastal_defense
 		x = -2
 		y = 1
 		relative_position_id = uk_mediterranean_focus
@@ -2394,7 +2394,7 @@ focus_tree = {
 		prerequisite = { focus = uk_malta_focus }
 		prerequisite = { focus = uk_fortress_rock }
 		prerequisite = { focus = uk_develop_egypt_focus }
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_balkan_diplomacy
 		available = {
 			has_government = democratic
 		}
@@ -2489,7 +2489,7 @@ focus_tree = {
 
 
 focus = {
-	id = uk_foritfy_the_empire_focus
+	id = uk_fortify_the_empire_focus
 
 	prerequisite = { focus = uk_colonial_focus }
 
@@ -2499,7 +2499,7 @@ focus = {
 	y = 1
 	relative_position_id = uk_colonial_focus
 
-	cost = 2
+	cost = 5
 	completion_reward = {
 					if = {
 				limit = {
@@ -2526,7 +2526,7 @@ focus = {
 		available = {
 			183 = { is_owned_and_controlled_by = ENG}
 		}
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 1
 		relative_position_id = uk_mediterranean_focus
@@ -2557,7 +2557,7 @@ focus = {
 		available = {
 			183 = { is_owned_and_controlled_by = ENG}
 		}
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_focus_generic_befriend_cyprus
 		x = 2
 		y = 1
 		relative_position_id = uk_mediterranean_focus
@@ -2601,7 +2601,7 @@ focus = {
 	focus = {
 		id = uk_protect_suez
 		prerequisite = { focus = uk_develop_egypt_focus }
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_generic_the_suez
 		x = 0
 		y = 1
 		relative_position_id = uk_develop_egypt_focus
@@ -2724,7 +2724,7 @@ focus = {
 		available = {
 			116 = { is_owned_and_controlled_by = ENG }
 		}		
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_focus_RAJ_mountain_guns
 		x = 0
 		y = 1
 		relative_position_id = uk_cyprus_focus
@@ -2789,7 +2789,7 @@ focus = {
 
 	focus = {
 		id = uk_asia_focus 
-		prerequisite = { focus = uk_foritfy_the_empire_focus }
+		prerequisite = { focus = uk_fortify_the_empire_focus }
 		
 		available = {
 			336 = {
@@ -2810,10 +2810,10 @@ focus = {
 			}
 		}
 
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_usa_focus_on_asia
 		x = 6
 		y = 1
-		relative_position_id = uk_foritfy_the_empire_focus
+		relative_position_id = uk_fortify_the_empire_focus
 		cost = 5
 
 		available_if_capitulated = yes
@@ -2903,7 +2903,7 @@ focus = {
 			CHI = { exists = no }
 		}
 
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_generic_road_investment
 		x = -2
 		y = 1
 		relative_position_id = uk_asia_focus
@@ -3133,7 +3133,7 @@ focus = {
 	focus = {
 		id = sp_rubber_focus
 		prerequisite = { focus = singapore_focus }
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_generic_rubber
 		x = 0
 		y = 1
 		relative_position_id = singapore_focus
@@ -3233,7 +3233,7 @@ focus = {
 	focus = {
 		id = gibraltar_of_asia
 		prerequisite = { focus = sp_rubber_focus }
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_ARG_defense_and_democracy
 		x = 0
 		y = 1
 		relative_position_id = sp_rubber_focus
@@ -3432,7 +3432,7 @@ focus = {
 	focus = {
 		id = hk_air_focus
 		prerequisite = { focus = hk_landward_forts_focus }
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_PER_construct_air_defenses
 		x = 0
 		y = 1
 		relative_position_id = hk_landward_forts_focus
@@ -5791,7 +5791,7 @@ focus = {
 
 		mutually_exclusive = {focus = ENG_ireland_friendship}
 		prerequisite = { focus = ENG_french_alliance }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_goal_generic_territory_or_war
 		x = -1
 		y = 1
 		relative_position_id = ENG_french_alliance
@@ -5833,7 +5833,7 @@ focus = {
 
 		mutually_exclusive = {focus = ENG_annex_ireland}
 		prerequisite = { focus = ENG_french_alliance }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
 		x = 1
 		y = 1
 		relative_position_id = ENG_french_alliance
@@ -5871,6 +5871,9 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}	
+		bypass = {
+			FRA = {is_in_faction = yes}
+		}
 		completion_reward = {
 			add_to_faction = FRA
 		}
@@ -5889,7 +5892,7 @@ focus = {
 		available_if_capitulated = yes
 
 		prerequisite = { focus = ENG_steady_as_she_goes }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_SOV_reinforce_western_naval_bases_ccp_2d_sov_compatibility
 		x = -10
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
@@ -5929,7 +5932,7 @@ focus = {
 			date > 1940.04.01
 			NOR = {is_in_faction = no}
 		}
-		bypass if = {
+		bypass = {
 			NOR = {is_in_faction = yes}
 		}
 		cancel_if_invalid = no
@@ -5937,7 +5940,7 @@ focus = {
 		available_if_capitulated = yes
 
 		prerequisite = { focus = ENG_scandinavian_intervention }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_focus_generic_develop_norway_silhouette
 		x = -1
 		y = 1
 		relative_position_id = ENG_scandinavian_intervention
@@ -5960,7 +5963,7 @@ focus = {
 			date > 1940.04.01
 			DEN = {is_in_faction = no}
 		}
-		bypass if = {
+		bypass = {
 			DEN = {is_in_faction = yes}
 		}
 		cancel_if_invalid = no
@@ -5968,7 +5971,7 @@ focus = {
 		available_if_capitulated = yes
 
 		prerequisite = { focus = ENG_scandinavian_intervention }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_focus_generic_develop_denmark_silhouette
 		x = 1
 		y = 1
 		relative_position_id = ENG_scandinavian_intervention
@@ -5998,7 +6001,7 @@ focus = {
 
 		prerequisite = { focus = ENG_norway_intervention }
 		prerequisite = {focus = ENG_denmark_intervention }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_focus_generic_invade_sweden
 		x = -1
 		y = 1
 		relative_position_id = ENG_denmark_intervention
@@ -6028,7 +6031,7 @@ focus = {
 		available_if_capitulated = yes
 
 		prerequisite = { focus = ENG_prepare_for_the_inevitable }
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_focus_generic_women_in_military
 		x = 0
 		y = 1
 		relative_position_id = ENG_prepare_for_the_inevitable
@@ -6118,7 +6121,7 @@ focus = {
 		}		
 		prerequisite = { focus = ENG_issue_gasmasks }
 
-		icon = GFX_goal_generic_construction
+		icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
 
 		x = 0
 		y = 1
