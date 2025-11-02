@@ -270,7 +270,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -294,7 +294,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_motorized_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -747,7 +747,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = shadow_scheme_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1725,7 +1725,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1778,7 +1778,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = uk_destroyer_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1823,7 +1823,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1897,7 +1897,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5658,7 +5658,7 @@ focus = {
 
 		will_lead_to_war_with = IRQ
 		prerequisite = { focus = ENG_steady_as_she_goes }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_iraq
 		x = -6
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
@@ -5929,7 +5929,7 @@ focus = {
 				threat > 0.5
 				GER = {has_war = yes}
 			}
-			date > 1940.04.01
+			date > 1940.01.01
 			NOR = {is_in_faction = no}
 		}
 		bypass = {
@@ -5960,7 +5960,7 @@ focus = {
 				threat > 0.5
 				GER = {has_war = yes}
 			}
-			date > 1940.04.01
+			date > 1940.01.01
 			DEN = {is_in_faction = no}
 		}
 		bypass = {
