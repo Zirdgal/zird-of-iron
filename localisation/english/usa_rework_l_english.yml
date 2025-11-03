@@ -33,6 +33,31 @@
  USA_war_plan_indigo:0 "War Plan Indigo"
  USA_war_plan_indigo_desc:0 "War Plan Indigo"
 
+ # navy focus
+ USA_mass_production:0 "Mass production"
+ USA_mass_production_desc:0 "Mass production"
+ USA_guardians_of_carriers:0 "Guardians of the Carriers"
+ USA_guardians_of_carriers_desc:0 "Guardians of the Carriers"
+ USA_floating_airfields:0 "Floating Airfields"
+ USA_floating_airfields_desc:0 "Floating Airfields"
+ USA_the_heaviest_armour:0 "The Heaviest Armor"
+ USA_the_heaviest_armour_desc:0 "The Heaviest Armour"
+ USA_fleet_hunters:0 "Fleet Hunters"
+ USA_fleet_hunters_desc:0 "Fleet Hunters"
+ USA_grand_battlefleet:0 "Grand Battlefleet"
+ USA_grand_battlefleet_desc:0 "Grand Battlefleet"
+ USA_submarine_primacy:0 "Submarine Primacy"
+ USA_submarine_primacy_desc:0 "Submarine Primacy"
+ USA_improved_submarine_radar:0 "Improved Submarine Radar"
+ USA_improved_submarine_radar_desc:0 "Improved Submarine Radar"
+ USA_submarine_works:0 "Submarine Works"
+ USA_submarine_works_desc:0 "Submarine Works"
+ USA_trade_interdiction:0 "Trade Interdiction"
+ USA_trade_interdiction_desc:0 "Trade Interdiction"
+ USA_america_rules_the_waves:0 "§3America Rules the Waves!§!"
+ USA_america_rules_the_waves_desc:0 ""
+
+
  # ideas
  great_depression:0 "The Great Depression"
  great_depression_desc:0 "Although a worldwide phenomenon, the Great Depression started with a stock market crash in the United States and has caused unemployment rates to soar and tax revenue to plummet. The American people and its government have enough to worry about without getting involved in another war."
