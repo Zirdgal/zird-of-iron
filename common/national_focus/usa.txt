@@ -2719,7 +2719,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = USA_war_plans_division
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3230,7 +3230,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		x = 2
 		y = 1
-		cost = 10
+		cost = 8
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3622,7 +3622,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3651,7 +3651,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_battleship_primacy
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3676,7 +3676,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_advanced_mahanian_doctrine
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3695,7 +3695,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_battleship_primacy }
 		relative_position_id = USA_battleship_primacy
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3748,7 +3748,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_advanced_basing
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3767,7 +3767,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_the_heaviest_armour
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3790,7 +3790,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3820,7 +3820,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3850,7 +3850,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = USA_carrier_primacy
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3876,7 +3876,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_bureau_of_aeronautics }
 		relative_position_id = USA_bureau_of_aeronautics
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3923,7 +3923,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_carrier_primacy
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3942,7 +3942,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_mass_production
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3961,7 +3961,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_naval_radar
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3970,7 +3970,13 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-
+			navy_experience = 25
+			add_doctrine_cost_reduction = {
+				name = USA_advanced_mahanian_doctrine
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_base_strike
+			}
 		}
 	}
 
@@ -3982,7 +3988,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		relative_position_id = USA_bureau_of_ships
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -4002,7 +4008,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_escort_effort
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -4027,7 +4033,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_trade_interdiction }
 		relative_position_id = USA_trade_interdiction
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4043,13 +4049,6 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_fleet_submarines
-				bonus = 1.0
-				uses = 2
-				category = ss_tech
-			}
-
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 0.25
@@ -4073,7 +4072,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_submarine_primacy }
 		relative_position_id = USA_submarine_primacy
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4089,7 +4088,13 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = USA_trade_interdiction_doctrine
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_trade_interdiction
+			}
 		}
 	}
 
@@ -4100,7 +4105,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_fleet_submarines focus = USA_submarine_works}
 		relative_position_id = USA_fleet_submarines
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4129,7 +4134,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_submarine_primacy }
 		relative_position_id = USA_submarine_primacy
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4148,6 +4153,17 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+
+			add_tech_bonus = {
+				name = USA_naval_radar
+				uses = 2
+				bonus = 0.5
+				category = radar_tech
+			}
 		}
 	}
 	focus = {
@@ -4157,7 +4173,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_improved_submarine_radar }
 		relative_position_id = USA_improved_submarine_radar
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4195,6 +4211,38 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			add_ideas = USA_maritime_commission
 			add_doctrine_cost_reduction = {
 				name = USA_fund_the_navy
@@ -4212,7 +4260,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_fund_the_navy
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -4251,7 +4299,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_expand_the_USMC
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
