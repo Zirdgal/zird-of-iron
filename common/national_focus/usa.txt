@@ -120,7 +120,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
-		x = 5
+		x = 4
 		y = 1
 
 		available = {
@@ -398,7 +398,7 @@ focus_tree = {
 		available = {
 			
 		}
-		x = 3
+		x = 2
 		y = 5
 		relative_position_id = USA_highway_1
 		cost = 5
@@ -456,7 +456,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_enrollment_of_dali_children
 		prerequisite = { focus = USA_highway_1 }
 		relative_position_id = USA_highway_1
-		x = -2
+		x = -1
 		y = 1
 
 		available = {
@@ -543,7 +543,7 @@ focus_tree = {
 	focus = {
 		id = USA_agricultural_adjustment_act
 		icon = GFX_focus_generic_farmland
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = USA_national_youth_administration }
 		relative_position_id = USA_national_youth_administration
@@ -646,7 +646,7 @@ focus_tree = {
 	focus = {
 		id = USA_federal_housing_act
 		icon = GFX_focus_generic_low_cost_housing
-		x = 2
+		x = 1
 		y = 1
 		prerequisite = { focus = USA_wealth_tax_act }
 		prerequisite = { focus = USA_social_security_act }
@@ -758,7 +758,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_second_world_war
 		icon = GFX_focus_spa_the_war_of_vengeance
-		x = 1
+		x = -1
 		y = 1
 		prerequisite = { focus = USA_federal_housing_act }
 		relative_position_id = USA_federal_housing_act
@@ -2158,7 +2158,7 @@ focus_tree = {
 		y = -1
 		relative_position_id = USA_wpa
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2336,7 +2336,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2402,7 +2402,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2439,7 +2439,7 @@ focus_tree = {
 		prerequisite = { focus = USA_intervention_in_europe }
 		mutually_exclusive = { }
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2480,7 +2480,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -2529,7 +2529,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_intervention_in_europe
-		cost = 10
+		cost = 6
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -2560,7 +2560,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 1
@@ -2595,7 +2595,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = USA_intervention_in_asia
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -2622,7 +2622,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_intervention_in_asia
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3492,10 +3492,10 @@ focus_tree = {
 		id = USA_two_ocean_navy_act
 		icon = GFX_focus_generic_navy_battleship2
 		x = 8
-		y = 1
+		y = 0
 		prerequisite = { focus = USA_war_department }
-		relative_position_id = USA_war_department
-		cost = 10
+		relative_position_id = USA_air_war_plans_division
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3526,18 +3526,18 @@ focus_tree = {
 
 		complete_tooltip = {
 			378 = { 
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
 			358 = { 
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -3561,10 +3561,10 @@ focus_tree = {
 					}
 				}
 				378 = { 
-					add_extra_state_shared_building_slots = 5
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 5
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -3580,71 +3580,23 @@ focus_tree = {
 					}
 				}
 				358 = { 
-					add_extra_state_shared_building_slots = 5
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 5
+						level = 3
 						instant_build = yes
 					}
 				}
 			}
 		}
 	}
-	focus = {
-		id = USA_maritime_commission
-		icon = GFX_goal_generic_production2
-		x = -3
-		y = 1
-		prerequisite = { focus = USA_two_ocean_navy_act }
-		relative_position_id = USA_two_ocean_navy_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_maritime_commission
-		}
-	}
-	
-	focus = {
-		id = USA_liberty_ships
-		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = USA_maritime_commission }
-		x = -3
-		y = 2
-		relative_position_id = USA_two_ocean_navy_act
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = liberty_ships_focus
-		}
-	}
 
 	focus = {
 		id = USA_bureau_of_ships
 		icon = GFX_goal_generic_build_navy
-		x = 2
+		x = -1
 		y = 1
-		cost = 10
+		cost = 8
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -3666,8 +3618,8 @@ focus_tree = {
 		id = USA_battleship_primacy
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = USA_bureau_of_ships }
-		mutually_exclusive = { focus = USA_carrier_primacy }
-		x = -3
+		mutually_exclusive = { focus = USA_carrier_primacy focus = USA_submarine_primacy }
+		x = 1
 		y = 1
 		relative_position_id = USA_bureau_of_ships
 		cost = 10
@@ -3696,7 +3648,7 @@ focus_tree = {
 		id = USA_advanced_mahanian_doctrine
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = USA_battleship_primacy }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = USA_battleship_primacy
 		cost = 10
@@ -3708,21 +3660,40 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			navy_experience = 50
 			add_doctrine_cost_reduction = {
 				name = USA_advanced_mahanian_doctrine
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_base_strike
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_fleet_in_being
 			}
 		}
 	}
+	focus = {
+		id = USA_the_heaviest_armour
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
+		prerequisite = { focus = USA_advanced_mahanian_doctrine }
+		x = 0
+		y = 1
+		relative_position_id = USA_advanced_mahanian_doctrine
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
 
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
 	focus = {
 		id = USA_advanced_basing
-		icon = GFX_goal_generic_occupy_states_coastal
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_advanced_mahanian_doctrine }
+		icon = GFX_focus_generic_coastal_fort
+		x = 1
+		y = 1
+		prerequisite = { focus = USA_battleship_primacy }
 		relative_position_id = USA_battleship_primacy
 		cost = 10
 
@@ -3770,13 +3741,83 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = USA_fleet_hunters
+		icon = GFX_focus_generic_merchant_fleet
+		prerequisite = { focus = USA_advanced_basing }
+		x = 0
+		y = 1
+		relative_position_id = USA_advanced_basing
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = USA_grand_battlefleet
+		icon = GFX_focus_SMB_blue_water_fleet
+		prerequisite = { focus = USA_the_heaviest_armour focus = USA_fleet_hunters }
+		x = 1
+		y = 1
+		relative_position_id = USA_the_heaviest_armour
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+
+	
+
+	focus = {
+		id = USA_submarine_primacy
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = USA_bureau_of_ships }
+		mutually_exclusive = { focus = USA_carrier_primacy focus = USA_carrier_primacy}
+		x = 5
+		y = 1
+		relative_position_id = USA_bureau_of_ships
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			add_tech_bonus = {
+				name = USA_submarine_primacy
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
 
 	focus = {
 		id = USA_carrier_primacy
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = USA_bureau_of_ships }
-		mutually_exclusive = { focus = USA_battleship_primacy }
-		x = -1
+		mutually_exclusive = { focus = USA_battleship_primacy focus = USA_submarine_primacy }
+		x = -3
 		y = 1
 		relative_position_id = USA_bureau_of_ships
 		cost = 10
@@ -3805,7 +3846,8 @@ focus_tree = {
 		id = USA_bureau_of_aeronautics
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = USA_carrier_primacy }
-		x = 0
+		prerequisite = { focus = USA_air_war_plans_division }
+		x = -1
 		y = 1
 		relative_position_id = USA_carrier_primacy
 		cost = 10
@@ -3875,10 +3917,69 @@ focus_tree = {
 	}
 
 	focus = {
-		id = USA_escort_effort
-		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = USA_bureau_of_ships }
+		id = USA_mass_production
+		icon = GFX_focus_generic_torpedo_production
+		prerequisite = { focus = USA_carrier_primacy }
 		x = 1
+		y = 1
+		relative_position_id = USA_carrier_primacy
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = USA_guardians_of_carriers
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = USA_mass_production }
+		x = 0
+		y = 1
+		relative_position_id = USA_mass_production
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = USA_floating_airfields
+		icon = GFX_focus_generic_air_carrier
+		prerequisite = { focus = USA_guardians_of_carriers focus = USA_naval_radar }
+		x = 1
+		y = 1
+		relative_position_id = USA_naval_radar
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_escort_effort
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = USA_bureau_of_ships }
+		prerequisite = { focus = USA_fund_the_navy }
+		x = 8
 		y = 1
 		relative_position_id = USA_bureau_of_ships
 		cost = 10
@@ -3896,7 +3997,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_convoy_tactics
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_focus_generic_refit_civilian_ships
 		prerequisite = { focus = USA_escort_effort }
 		x = 0
 		y = 1
@@ -3921,11 +4022,11 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_fleet_submarines
-		icon = GFX_goal_generic_navy_submarine
-		x = 3
+		icon = GFX_focus_generic_cruiser_submarines
+		x = 0
 		y = 1
-		prerequisite = { focus = USA_bureau_of_ships }
-		relative_position_id = USA_bureau_of_ships
+		prerequisite = { focus = USA_trade_interdiction }
+		relative_position_id = USA_trade_interdiction
 		cost = 10
 
 		ai_will_do = {
@@ -3965,14 +4066,40 @@ focus_tree = {
 			}	
 		}
 	}
+	focus = {
+		id = USA_trade_interdiction
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 1
+		y = 1
+		prerequisite = { focus = USA_submarine_primacy }
+		relative_position_id = USA_submarine_primacy
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+
+		}
+	}
 
 	focus = {
 		id = USA_unrestricted_submarine_warfare
 		icon = GFX_goal_generic_wolf_pack
-		x = 3
-		y = 2
-		prerequisite = { focus = USA_fleet_submarines }
-		relative_position_id = USA_bureau_of_ships
+		x = -1
+		y = 1
+		prerequisite = { focus = USA_fleet_submarines focus = USA_submarine_works}
+		relative_position_id = USA_fleet_submarines
 		cost = 10
 
 		ai_will_do = {
@@ -3995,11 +4122,67 @@ focus_tree = {
 			add_ideas = USA_unrestricted_submarine_warfare
 		}
 	}
+	focus = {
+		id = USA_improved_submarine_radar
+		icon = GFX_focus_generic_radio_communication
+		x = -1
+		y = 1
+		prerequisite = { focus = USA_submarine_primacy }
+		relative_position_id = USA_submarine_primacy
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_submarine_works
+		icon = GFX_focus_generic_midget_submarines
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_improved_submarine_radar }
+		relative_position_id = USA_improved_submarine_radar
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
 
 	focus = {
 		id = USA_fund_the_navy
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 7
+		x = 8
 		y = 1
 		relative_position_id = USA_two_ocean_navy_act
 		cost = 10
@@ -4011,7 +4194,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
-				completion_reward = {
+		completion_reward = {
+			add_ideas = USA_maritime_commission
 			add_doctrine_cost_reduction = {
 				name = USA_fund_the_navy
 				uses = 3
@@ -4025,7 +4209,7 @@ focus_tree = {
 		id = USA_expand_the_USMC
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = USA_fund_the_navy }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = USA_fund_the_navy
 		cost = 10
@@ -4076,6 +4260,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_ideas = liberty_ships_focus
 			add_tech_bonus = {
 				name = USA_amphibious_operations
 				bonus = 1.0
@@ -4085,7 +4270,24 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = USA_america_rules_the_waves
+		icon = GFX_focus_USA_rules_the_waves
+		prerequisite = { focus = USA_unrestricted_submarine_warfare focus = USA_grand_battlefleet focus = USA_floating_airfields}
+		x = -2
+		y = 1
+		relative_position_id = USA_grand_battlefleet
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+		
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+		}
+	}
 
 
 	
