@@ -1,9 +1,0 @@
-﻿spriteTypes = {	
-
-	#### Generic continuous goal icons
-
-	SpriteType = {
-	name = "GFX_focus_USA_rules_the_waves"
-	texturefile = "gfx/interface/goals/focus-usa-america-rules-the-waves.dds"			
-	}	
-}
