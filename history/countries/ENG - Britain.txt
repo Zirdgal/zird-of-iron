@@ -97,6 +97,7 @@ set_technology = {
 	radio = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	marines  = 1
 }
 
 complete_special_project = {
@@ -237,11 +238,6 @@ if = {
 		freedom_level = 0.35
 	}
 	set_autonomy = {
-		target = OMA
-		autonomous_state = autonomy_colony
-		freedom_level = 0.35
-	}
-	set_autonomy = {
 		target = CAN
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.4
@@ -256,45 +252,10 @@ if = {
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.2
 	}
-	set_autonomy = {
-		target = NZL
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = BRM
-		autonomous_state = autonomy_colony
-		freedom_level = 0.2
-	}
-	#set_autonomy = {
-	#	target = EGY
-	#	autonomous_state = autonomy_dominion
-	#	freedom_level = 0.2
-	#}
-	set_autonomy = {
-		target = PAL
-		autonomous_state = autonomy_integrated_puppet
-		freedom_level = 0.5
-	}
-	set_autonomy = {
-		target = JOR
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.2
-	}
-	set_autonomy = {
-		target = KUW
-		autonomous_state = autonomy_integrated_puppet
-		freedom_level = 0.5
-	}
 
 	else = {
 		puppet = MAL
 		puppet = RAJ
-		puppet = JOR
-		puppet = PAL
-		#puppet = EGY
-		puppet = KUW
-		puppet = OMA
 	}
 }
 

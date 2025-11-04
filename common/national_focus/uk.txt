@@ -1132,7 +1132,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = general_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -2393,7 +2393,7 @@ focus_tree = {
 		id = uk_balkan_strategy
 		prerequisite = { focus = uk_malta_focus }
 		prerequisite = { focus = uk_fortress_rock }
-		prerequisite = { focus = uk_develop_egypt_focus }
+		prerequisite = { focus = uk_protect_suez }
 		icon = GFX_focus_generic_balkan_diplomacy
 		available = {
 			has_government = democratic
@@ -2499,7 +2499,7 @@ focus = {
 	y = 1
 	relative_position_id = uk_colonial_focus
 
-	cost = 5
+	cost = 2
 	completion_reward = {
 					if = {
 				limit = {
@@ -3021,7 +3021,7 @@ focus = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_war_support = 0.075
+			add_war_support = 0.1
 			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
