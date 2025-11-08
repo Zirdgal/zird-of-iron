@@ -30,6 +30,44 @@ focus_tree = {
     default = no
     continuous_focus_position = { x = 200 y = 3800 }
 
+	focus = {
+		id = IND_annex_australia
+		icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+		x = -5
+		y = 0
+		cost = 0
+
+		ai_will_do = {
+			factor = -10
+		}
+
+		available = {
+			NOT = {
+				AST = {
+					is_ai = true
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = { 
+				limit = {
+					is_core_of = AST
+				}
+				add_core_of = IND
+			}
+			annex_country = { target = AST transfer_troops = yes }
+		}
+	}
+
     focus = {
         id = RAJ_indianize_the_army
         icon = GFX_focus_RAJ_indianisation_of_army

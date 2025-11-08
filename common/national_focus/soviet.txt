@@ -29,6 +29,44 @@ focus_tree = {
 	continuous_focus_position = { x = 55 y = 1500 }
 
 
+	focus = {
+		id = SOV_annex_mongolia
+		icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+		x = -5
+		y = 0
+		cost = 0
+
+		ai_will_do = {
+			factor = -10
+		}
+
+		available = {
+			NOT = {
+				MON = {
+					is_ai = true
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = { 
+				limit = {
+					is_core_of = MON
+				}
+				add_core_of = SOV
+			}
+			annex_country = { target = MON transfer_troops = yes }
+		}
+	}
+
 ##    ##  #######      ######  ######## ######## ########     ########     ###     ######  ##    ## 
 ###   ## ##     ##    ##    ##    ##    ##       ##     ##    ##     ##   ## ##   ##    ## ##   ##  
 ####  ## ##     ##    ##          ##    ##       ##     ##    ##     ##  ##   ##  ##       ##  ##   

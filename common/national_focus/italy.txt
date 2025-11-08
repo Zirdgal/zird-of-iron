@@ -42,6 +42,44 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = ITA_annex_bulgaria
+		icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+		x = -5
+		y = 0
+		cost = 0
+
+		ai_will_do = {
+			factor = -10
+		}
+
+		available = {
+			NOT = {
+				BUL = {
+					is_ai = true
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = { 
+				limit = {
+					is_core_of = BUL
+				}
+				add_core_of = ITA
+			}
+			annex_country = { target = BUL transfer_troops = yes }
+		}
+	}
+
 ########  ##    ##    ########  ##        #######   #######  ########        ###    ##        #######  ##    ## ######## 
 ##     ##  ##  ##     ##     ## ##       ##     ## ##     ## ##     ##      ## ##   ##       ##     ## ###   ## ##       
 ##     ##   ####      ##     ## ##       ##     ## ##     ## ##     ##     ##   ##  ##       ##     ## ####  ## ##       

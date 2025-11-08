@@ -16,6 +16,81 @@
 
 
 	focus = {
+		id = JAP_annex_siam
+		icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+		x = -7
+		y = 0
+		cost = 0
+
+		ai_will_do = {
+			factor = -10
+		}
+
+		available = {
+			NOT = {
+				SIA = {
+					is_ai = true
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = { 
+				limit = {
+					is_core_of = SIA
+				}
+				add_core_of = JAP
+			}
+			annex_country = { target = SIA transfer_troops = yes }
+		}
+	}
+
+	focus = {
+		id = JAP_annex_manchuria
+		icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+		x = -5
+		y = 0
+		cost = 0
+
+		ai_will_do = {
+			factor = -10
+		}
+
+		available = {
+			NOT = {
+				MAN = {
+					is_ai = true
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = { 
+				limit = {
+					is_core_of = MAN
+				}
+				add_core_of = JAP
+			}
+			annex_country = { target = MAN transfer_troops = yes }
+		}
+	}
+	focus = {
 		id = JAP_purge_the_kodoha_faction
 		icon = GFX_goal_generic_major_war
 		x = 2

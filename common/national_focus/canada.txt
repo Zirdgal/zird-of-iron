@@ -62,7 +62,43 @@ focus_tree = {
 	############################
 	##### INDUSTRY SECTION #####
 	############################
+	focus = {
+		id = CAN_annex_south_africa
+		icon = GFX_focus_generic_africa_liberation
+		x = -5
+		y = 0
+		cost = 0
 
+		ai_will_do = {
+			factor = -10
+		}
+
+		available = {
+			NOT = {
+				SAF = {
+					is_ai = true
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = { 
+				limit = {
+					is_core_of = SAF
+				}
+				add_core_of = CAN
+			}
+			annex_country = { target = SAF transfer_troops = yes }
+		}
+	}
 	focus = {
 		id = CAN_rowell_sirois_commission
 		icon = GFX_goal_generic_consumer_goods
