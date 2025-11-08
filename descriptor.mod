@@ -1,4 +1,4 @@
-version="0.0.001"
+version="0.0.003"
 tags={
 	"Gameplay"
 	"Balance"
@@ -6,3 +6,4 @@ tags={
 }
 name="Zird Of Iron"
 supported_version="1.16.*"
+picture="thumbnail.png"
