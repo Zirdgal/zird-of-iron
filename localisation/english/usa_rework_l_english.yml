@@ -1,5 +1,5 @@
 ﻿l_english:
- #ECONOMY
+ # FOCUS / ECONOMY
  USA_continue_the_new_deal:0 "The Second New Deal"
  USA_continue_the_new_deal_desc:0 "The policies of the New Deal have proven to work. We must not lose our way now."
  USA_wpa:0 "Works Progress Administration"
@@ -29,13 +29,13 @@
  USA_coal_mines_inspections:0 "Coal Mine Inspections"
  USA_coal_mines_inspections_desc:0 "Coal Mine Inspections"
 
-# WAR PLANS:
+# FOCUS / WAR PLANS 
  USA_war_plan_violet:0 "War Plan Violet"
  USA_war_plan_violet_desc:0 "War Plan Violet"
  USA_war_plan_indigo:0 "War Plan Indigo"
  USA_war_plan_indigo_desc:0 "War Plan Indigo"
 
- #NAVY STUFF:
+ # FOCUS /  NAVY STUFF
  USA_mass_production:0 "Mass production"
  USA_mass_production_desc:0 "Mass production"
  USA_guardians_of_carriers:0 "Guardians of the Carriers"
@@ -83,6 +83,12 @@
  war_depression_2_desc:0 "Our economic prosperity helps us in times of war, allowing us to quickly rearm and modernize."
  USA_social_security_idea:0 "Social Security"
  USA_social_security_idea_desc:0 "Social Security Act"
+
+ # IDEAS / WAR PLANS
+ USA_focus_on_asia_idea:0 "Focus on Asia"
+ USA_focus_on_asia_idea_desc:0 "Focus on Asia"
+ USA_focus_on_europe_idea:0 "Focus on Europe"
+ USA_focus_on_europe_idea_desc:0 "Focus on Europe"
 
 
  # IDEAS / NAVY
