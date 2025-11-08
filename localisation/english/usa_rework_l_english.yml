@@ -1,4 +1,5 @@
 ﻿l_english:
+ #ECONOMY
  USA_continue_the_new_deal:0 "The Second New Deal"
  USA_continue_the_new_deal_desc:0 "The policies of the New Deal have proven to work. We must not lose our way now."
  USA_wpa:0 "Works Progress Administration"
@@ -28,12 +29,13 @@
  USA_coal_mines_inspections:0 "Coal Mine Inspections"
  USA_coal_mines_inspections_desc:0 "Coal Mine Inspections"
 
+# WAR PLANS:
  USA_war_plan_violet:0 "War Plan Violet"
  USA_war_plan_violet_desc:0 "War Plan Violet"
  USA_war_plan_indigo:0 "War Plan Indigo"
  USA_war_plan_indigo_desc:0 "War Plan Indigo"
 
- # navy focus
+ #NAVY STUFF:
  USA_mass_production:0 "Mass production"
  USA_mass_production_desc:0 "Mass production"
  USA_guardians_of_carriers:0 "Guardians of the Carriers"
@@ -42,7 +44,7 @@
  USA_floating_airfields_desc:0 "Floating Airfields"
  USA_the_heaviest_armour:0 "The Heaviest Armor"
  USA_the_heaviest_armour_desc:0 "The Heaviest Armour"
- USA_fleet_hunters:0 "Fleet Hunters"
+ USA_fleet_hunters:0 "Fleet Hunters" 
  USA_fleet_hunters_desc:0 "Fleet Hunters"
  USA_grand_battlefleet:0 "Grand Battlefleet"
  USA_grand_battlefleet_desc:0 "Grand Battlefleet"
@@ -55,10 +57,10 @@
  USA_trade_interdiction:0 "Trade Interdiction"
  USA_trade_interdiction_desc:0 "Trade Interdiction"
  USA_america_rules_the_waves:0 "§3America Rules the Waves!§!"
- USA_america_rules_the_waves_desc:0 ""
+ USA_america_rules_the_waves_desc:0 "§3e§!"
 
 
- # ideas
+ # IDEAS / ECONOMY
  great_depression:0 "The Great Depression"
  great_depression_desc:0 "Although a worldwide phenomenon, the Great Depression started with a stock market crash in the United States and has caused unemployment rates to soar and tax revenue to plummet. The American people and its government have enough to worry about without getting involved in another war."
  great_depression_2:0 "The Great Depression"
@@ -81,3 +83,36 @@
  war_depression_2_desc:0 "Our economic prosperity helps us in times of war, allowing us to quickly rearm and modernize."
  USA_social_security_idea:0 "Social Security"
  USA_social_security_idea_desc:0 "Social Security Act"
+
+
+ # IDEAS / NAVY
+ USA_america_rules_the_waves_idea:0 "America Rules the Waves!"
+ USA_america_rules_the_waves_idea_desc:0 "America Rules the Waves!"
+ USA_navy_0:0 "The Navy"
+ USA_navy_0_desc:0 "The Navy"
+ USA_navy_carrier_1:0 "The Navy - Carrier Primacy"
+ USA_navy_carrier_1_desc:0 "The Navy - Carrier Primacy"
+ USA_navy_carrier_2:0 "The Navy - Carrier Primacy"
+ USA_navy_carrier_2_desc:0 "The Navy - Carrier Primacy"
+ USA_navy_carrier_3:0 "The Navy - Carrier Primacy"
+ USA_navy_carrier_3_desc:0 "The Navy - Carrier Primacy"
+ USA_navy_carrier_4:0 "The Navy - Carrier Primacy"
+ USA_navy_carrier_4_desc:0 "The Navy - Carrier Primacy"
+ USA_navy_battleship_1:0 "The Navy - Battleship Primacy"
+ USA_navy_battleship_1_desc:0 "The Navy - Battleship Primacy"
+ USA_navy_battleship_2:0 "The Navy - Battleship Primacy"
+ USA_navy_battleship_2_desc:0 "The Navy - Battleship Primacy"
+ USA_navy_battleship_3:0 "The Navy - Battleship Primacy"
+ USA_navy_battleship_3_desc:0 "The Navy - Battleship Primacy"
+ USA_navy_battleship_4:0 "The Navy - Battleship Primacy"
+ USA_navy_battleship_4_desc:0 "The Navy - Battleship Primacy"
+ USA_navy_submarine_1:0 "The Navy - Submarine Primacy"
+ USA_navy_submarine_1_desc:0 "The Navy - Submarine Primacy"
+ USA_navy_submarine_2:0 "The Navy - Submarine Primacy"
+ USA_navy_submarine_2_desc:0 "The Navy - Submarine Primacy"
+ USA_navy_submarine_3:0 "The Navy - Submarine Primacy"
+ USA_navy_submarine_3_desc:0 "The Navy - Submarine Primacy"
+ USA_navy_submarine_4:0 "The Navy - Submarine Primacy"
+ USA_navy_submarine_4_desc:0 "The Navy - Submarine Primacy"
+
+

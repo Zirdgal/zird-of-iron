@@ -301,21 +301,403 @@ ideas = {
 
 
 
+############### NAVY ##########################
+
+		USA_navy_0 = {
+			picture = generic_navy_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.05
+				experience_gain_navy_unit_factor = 0.05
+			}
+		}
+
+		USA_navy_carrier_1 = {
+			picture = generic_navy_carrier_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				air_nav_efficiency = 0.05
+			}
+
+		}
+		USA_navy_carrier_2 = {
+			picture = generic_navy_carrier_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+	
+
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				air_nav_efficiency = 0.05
+			}
+			
+			equipment_bonus = {
+
+				ship_hull_carrier = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05 instant = yes
+				}
+
+			}
+		}
+		USA_navy_carrier_3 = {
+			picture = generic_navy_carrier_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				air_nav_efficiency = 0.05
+				naval_critical_effect_factor = -0.05
+				critical_receive_chance = -0.05
+				naval_defense_factor = 0.05
+			}
+			
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+		USA_navy_carrier_4 = {
+			picture = generic_navy_carrier_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				air_nav_efficiency = 0.05
+				naval_critical_effect_factor = -0.05
+				critical_receive_chance = -0.05
+				naval_defense_factor = 0.05
+				spotting_chance = 0.05
+				naval_strike_attack_factor = 0.05
+				naval_strike_targetting_factor = 0.05
+				naval_strike_agility_factor = 0.05
+			}
+			
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.13 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+
+		USA_navy_battleship_1 = {
+			picture = generic_navy_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				screening_efficiency = 0.05
+			}
+		}
+		USA_navy_battleship_2 = {
+			picture = generic_navy_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				screening_efficiency = 0.05
+				navy_max_range_factor = 0.05
+				navy_visibility = -0.05
+				spotting_chance = 0.05
+			}
+		}
+		USA_navy_battleship_3 = {
+			picture = generic_navy_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				screening_efficiency = 0.05
+				navy_max_range_factor = 0.05
+				navy_visibility = -0.05
+				spotting_chance = 0.05
+				refit_speed = 0.05
+			}
+			equipment_bonus = {
+				ship_hull_heavy = {
+					build_cost_ic = -0.03 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.03 instant = yes
+				}
+			}
+		}
+		USA_navy_battleship_4 = {
+			picture = generic_navy_bonus
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				screening_efficiency = 0.10
+				navy_max_range_factor = 0.10
+				navy_visibility = -0.05
+				spotting_chance = 0.05
+				positioning = 0.05
+			}
+			equipment_bonus = {
+				ship_hull_heavy = {
+					build_cost_ic = -0.08 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.08 instant = yes
+				}
+			}
+		}
+		
+		USA_navy_submarine_1 = {
+			picture = generic_navy_submarines
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				navy_visibility = -0.05
+			}
+		}
+		USA_navy_submarine_2 = {
+			picture = generic_navy_submarines
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				navy_visibility = -0.05
+				naval_torpedo_hit_chance_factor = 0.05
+				naval_torpedo_screen_penetration_factor = 0.05
+				sub_retreat_speed = 0.10
+			}
+		}
+		USA_navy_submarine_3 = {
+			picture = generic_navy_submarines
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				navy_visibility = -0.05
+				naval_torpedo_hit_chance_factor = 0.05
+				naval_torpedo_screen_penetration_factor = 0.05
+				sub_retreat_speed = 0.10
+				refit_speed = 0.05
+			}
+			equipment_bonus = {
+				ship_hull_submarine = {
+					build_cost_ic = -0.3 instant = yes
+				}
+			}
+		}
+		USA_navy_submarine_4 = {
+			picture = generic_navy_submarines
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_equipment_upgrade_xp_cost = -0.15
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy_unit_factor = 0.1
+				navy_visibility = -0.05
+				spotting_chance = 0.05
+				naval_torpedo_hit_chance_factor = 0.05
+				naval_torpedo_reveal_chance_factor = 0.05
+				naval_torpedo_screen_penetration_factor = 0.05
+				naval_torpedo_cooldown_factor = 0.05
+				sub_retreat_speed = 0.10
+				refit_speed = 0.05
+				submarine_attack = 0.05
+			}
+			equipment_bonus = {
+				ship_hull_submarine = {
+					build_cost_ic = -0.8 instant = yes
+				}
+			}
+		}
 
 
 
+		USA_america_rules_the_waves_idea = {
+			picture = generic_navy_cruiser_warfare
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				naval_damage_factor = 0.05
+				naval_defense_factor = 0.05
+				navy_org_factor = 0.05
+				spotting_chance = 0.05
+				navy_max_range_factor = 0.15
+				naval_speed_factor = 0.05
+			}
+		}
 
 
+		escort_effort_focus = {
+			
+			allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
 
+		USA_maritime_commission = {
+			picture = generic_sea_focused_navy
+			allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
 
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_dockyard_factor = 0.1	
+			}
+		}
 
+		liberty_ships_focus = {
+			
+			allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				amphibious_invasion = 0.10
+			}
+			equipment_bonus = {
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
 
-
-
-
+########### OLD #################
 
 		USA_limited_intervention = {
 			picture = generic_production_bonus
@@ -588,22 +970,7 @@ ideas = {
 				planning_speed = 0.1	
 			}
 		}
-		USA_maritime_commission = {
-			picture = generic_sea_focused_navy
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				production_speed_dockyard_factor = 0.1	
-			}
-		}
+		
 		USA_greenland_patrol_idea = {
 			picture = tur_sub_zero_survival_training
 
@@ -984,69 +1351,7 @@ ideas = {
 			}
 		}
 
-		bureau_of_ships_focus = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_navy_bonus
-
-			modifier = {
-				naval_equipment_upgrade_xp_cost = -0.1
-			}
-			
-			equipment_bonus = {
-
-				ship_hull_heavy = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				ship_hull_carrier = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				ship_hull_light = {
-					build_cost_ic = -0.05 instant = yes
-				}
-				
-				ship_hull_submarine = {
-					build_cost_ic = -0.05 instant = yes
-				}
-			}
-		}
-
-		USA_unrestricted_submarine_warfare = {
-			
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_navy_bonus
-			
-			equipment_bonus = {
-
-				submarine = {
-					surface_detection = 0.1 instant = yes
-					sub_visibility = -0.1 instant = yes
-				}
-			}
-		}
+		
 			
 
 		
@@ -1224,28 +1529,7 @@ ideas = {
 			}
 		}
 
-		liberty_ships_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				amphibious_invasion = 0.10
-			}
-			equipment_bonus = {
-				convoy = {
-					instant = yes
-					build_cost_ic = -0.25
-				}
-			}
-		}
+		
 
 		air_war_plans_division_focus = {
 			
@@ -1310,25 +1594,8 @@ ideas = {
 			}
 		}
 
-		escort_effort_focus = {
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-			
-			equipment_bonus = {
-				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
 		
+
 		home_of_the_free = {
 			
 			allowed = {
