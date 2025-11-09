@@ -44,7 +44,7 @@ focus_tree = {
 		id = BRA_coffee_crisis_aftermath
 		icon = GFX_focus_BRA_coffee_crisis
 		#prerequisite = { focus =  }
-		x = 12
+		x = -15
 		y = 0
 		relative_position_id = BRA_tribunal_de_seguranca_nacional
 		cost = 5
@@ -1945,7 +1945,7 @@ focus_tree = {
 	focus = {
 		id = BRA_end_the_state_of_emergency
 		icon = GFX_focus_BRA_end_the_state_of_emergency
-		x = -15
+		x = -30
 		y = 0
 		relative_position_id = BRA_tribunal_de_seguranca_nacional
 		mutually_exclusive = { focus = BRA_tribunal_de_seguranca_nacional focus = BRA_prepare_for_second_intentona }
