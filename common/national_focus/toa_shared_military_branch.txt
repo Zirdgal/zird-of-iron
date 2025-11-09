@@ -263,14 +263,7 @@ shared_focus = {
 		}
 	}
 
-	#offset = {
-	#	x = -1
-	#	y = 0
-	#	trigger = {
-	#		tag = BRA
-	#	}
-	#}
-
+	
 	bypass = {
 		
 	}
@@ -300,14 +293,6 @@ shared_focus = {
 	y = 1
 
 	cost = 10
-
-	#offset = {
-	#	x = 3
-	#	y = 0
-	#	trigger = {
-	#		tag = BRA
-	#	}
-	#}
 
 	allow_branch = { 
 		NOT = {
@@ -1557,19 +1542,6 @@ shared_focus = {
 		}
 	}
 
-	offset = {
-		x = 1
-		y = 0
-		trigger = {
-			OR = {
-				original_tag = CHL
-				original_tag = URG
-				original_tag = PAR
-				original_tag = BOL
-			}
-		}
-	}
-
 	completion_reward = {
 		IF = {
 			limit = { NOT = { has_tech = tech_mountaineers }}
@@ -1634,21 +1606,6 @@ shared_focus = {
 			factor = 10
 		}
 
-	offset = {
-		x = -1
-		y = 0
-		trigger = {
-			OR = {
-				original_tag = CHL
-				original_tag = URG
-				original_tag = PAR
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-			}
-		}
-	}
-
 	completion_reward = {
 		IF = {
 			limit = { NOT = { has_tech = marines }}
@@ -1699,16 +1656,7 @@ shared_focus = {
 		}
 	}
 
-	offset = {
-		x = -1
-		y = 0
-		trigger = {
-			OR = {
-				original_tag = BRA
-				original_tag = ARG
-			}
-		}
-	}
+
  
 	available = {
 
@@ -2147,13 +2095,6 @@ shared_focus = {
 	x = 4
 	y = 1
 
-	offset = {
-		x = 2
-		y = 0
-		trigger = {
-			tag = BRA
-		}
-	}
 
 	cost = 5
 
@@ -2229,13 +2170,6 @@ shared_focus = {
 
 	dynamic = yes
 
-	offset = {
-		x = 4
-		y = 0
-		trigger = {
-			tag = BRA
-		}
-	}
 
 	icon = {
 		trigger = {
