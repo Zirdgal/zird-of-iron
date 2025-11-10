@@ -578,8 +578,8 @@ focus_tree = {
 		icon = GFX_focus_generic_democratic_europe
 		x = 1
 		y = 1
-		prerequisite = { focus = USA_agricultural_adjustment_act }
-		relative_position_id = USA_agricultural_adjustment_act
+		prerequisite = { focus = USA_national_labor_relations_act }
+		relative_position_id = USA_national_labor_relations_act
 		cost = 5
 
 		ai_will_do = {
@@ -613,8 +613,8 @@ focus_tree = {
 		icon = GFX_focus_RAJ_war_taxes
 		x = 1
 		y = 1
-		prerequisite = { focus = USA_national_labor_relations_act }
-		relative_position_id = USA_national_labor_relations_act
+		prerequisite = { focus = USA_agricultural_adjustment_act }
+		relative_position_id = USA_agricultural_adjustment_act
 		cost = 5
 
 		ai_will_do = {
@@ -646,7 +646,7 @@ focus_tree = {
 	focus = {
 		id = USA_federal_housing_act
 		icon = GFX_focus_generic_low_cost_housing
-		x = 1
+		x = -1
 		y = 1
 		prerequisite = { focus = USA_wealth_tax_act }
 		prerequisite = { focus = USA_social_security_act }
@@ -2481,7 +2481,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 22
+		x = 25
 		y = 0
 		relative_position_id = USA_continue_the_new_deal
 		
@@ -2994,7 +2994,7 @@ focus_tree = {
 	focus = {
 		id = USA_air_war_plans_division
 		icon = GFX_goal_generic_build_airforce
-		x = 2
+		x = 5
 		y = 1
 		cost = 5
 		#ai_will_do = {
@@ -3017,13 +3017,295 @@ focus_tree = {
 		}
 	}
 
+
+	focus = {
+		id = USA_agility
+		icon = GFX_goal_generic_air_fighter
+		mutually_exclusive = { focus = USA_tactics }
+		x = 3
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_air_war_plans_division }
+		relative_position_id = USA_air_war_plans_division
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_outmaneuver
+		icon = GFX_goal_generic_air_fighter2
+		x = 1
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_agility }
+		relative_position_id = USA_agility
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_tactics
+		icon = GFX_focus_usa_escort_fighters
+		mutually_exclusive = { focus = USA_agility }
+		x = -3
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_air_war_plans_division }
+		relative_position_id = USA_air_war_plans_division
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_overcome
+		icon = GFX_SOV_long_range_aircraft_ccp_2d_sov_compatibility
+		x = -1
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_tactics }
+		relative_position_id = USA_tactics
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_naca_langley_research_center
+		icon = GFX_focus_generic_air_research_boost
+		x = -2
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_tactics focus = USA_agility }
+		relative_position_id = USA_air_war_plans_division
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_the_hoverfly
+		icon = GFX_focus_generic_early_helicopter
+		x = -1
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_naca_langley_research_center}
+		prerequisite = { focus = USA_doctrine_advancements}
+		relative_position_id = USA_doctrine_advancements
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_doctrine_advancements
+		icon = GFX_goal_generic_air_doctrine
+		x = 1
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_naca_langley_research_center}
+		prerequisite = { focus = USA_american_british_conference}
+		relative_position_id = USA_naca_langley_research_center
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+
+	focus = {
+		id = USA_american_british_conference
+		icon = GFX_focus_chi_british_cooperation
+		x = 0
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_tactics focus = USA_agility }
+		relative_position_id = USA_air_war_plans_division
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_the_american_aircraft_industry
+		icon = GFX_focus_SMB_purchase_aircraft
+		x = 0
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_american_british_conference }
+		relative_position_id = USA_american_british_conference
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+
+
+	focus = {
+		id = USA_flying_fortresses
+		icon = GFX_focus_generic_long_range_aircraft
+		x = 2
+		y = 2
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_tactics focus = USA_agility }
+		relative_position_id = USA_air_war_plans_division
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_ocean_bombers
+		icon = GFX_focus_generic_multi_role_aircraft
+		x = -1
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_flying_fortresses  }
+		prerequisite = { focus = USA_american_british_conference  }
+		relative_position_id = USA_flying_fortresses
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_rockets
+		icon = GFX_focus_rocketry
+		x = 1
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		prerequisite = { focus = USA_flying_fortresses  }
+		prerequisite = { focus = USA_ocean_bombers  }
+		relative_position_id = USA_ocean_bombers
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_in_alis_vincimus
+		icon = GFX_unknown
+		x = 1
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		mutually_exclusive = { focus = USA_mors_ab_alto }
+		prerequisite = { focus = USA_the_hoverfly focus = USA_rockets  }
+		prerequisite = { focus = USA_the_american_aircraft_industry  }
+		prerequisite = { focus = USA_outmaneuver  }
+		relative_position_id = USA_rockets
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_mors_ab_alto
+		icon = GFX_unknown
+		x = -1
+		y = 1
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		mutually_exclusive = { focus = USA_in_alis_vincimus }
+		prerequisite = { focus = USA_the_hoverfly focus = USA_rockets  }
+		prerequisite = { focus = USA_the_american_aircraft_industry  }
+		prerequisite = { focus = USA_overcome  }
+		relative_position_id = USA_the_hoverfly
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+	
+		completion_reward = {
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	focus = {
 		id = USA_air_support
 		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = USA_air_war_plans_division }
 		mutually_exclusive = { focus = USA_strategic_bombing }
 		x = -1
-		y = 1
+		y = 10
 		relative_position_id = USA_air_war_plans_division
 		cost = 5
 		#ai_will_do = {
@@ -3040,10 +3322,9 @@ focus_tree = {
 	focus = {
 		id = USA_strategic_bombing
 		icon = GFX_goal_generic_occupy_start_war
-		prerequisite = { focus = USA_air_war_plans_division }
 		mutually_exclusive = { focus = USA_air_support }
 		x = 1
-		y = 1
+		y = 10
 		relative_position_id = USA_air_war_plans_division
 		cost = 5
 		#ai_will_do = {
@@ -3150,10 +3431,10 @@ focus_tree = {
 	focus = {
 		id = USA_escort_fighters
 		icon = GFX_focus_usa_escort_fighters
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		prerequisite = { focus = USA_air_support focus = USA_strategic_bombing }
-		relative_position_id = USA_air_war_plans_division
+		relative_position_id = USA_air_support
 		cost = 5
 
 		ai_will_do = {
@@ -3185,10 +3466,10 @@ focus_tree = {
 	focus = {
 		id = USA_us_army_airforce
 		icon = GFX_focus_generic_strike_at_democracy1
-		x = -1
-		y = 4
+		x = 0
+		y = 1
 		prerequisite = { focus = USA_TAC }
-		relative_position_id = USA_air_war_plans_division
+		relative_position_id = USA_TAC
 		cost = 5
 
 		ai_will_do = {
@@ -3220,10 +3501,10 @@ focus_tree = {
 	focus = {
 		id = USA_us_air_force
 		icon = GFX_goal_generic_build_airforce
-		x = 1
-		y = 4
+		x = 0
+		y = 1
 		prerequisite = { focus = USA_combined_bomber_offensive }
-		relative_position_id = USA_air_war_plans_division
+		relative_position_id = USA_combined_bomber_offensive
 		cost = 5
 
 		ai_will_do = {
@@ -3257,7 +3538,7 @@ focus_tree = {
 	focus = {
 		id = USA_two_ocean_navy_act
 		icon = GFX_focus_generic_navy_battleship2
-		x = 8
+		x = 11
 		y = 0
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_air_war_plans_division
@@ -3669,7 +3950,6 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				category = naval_bomber
-				category = naval_air
 			}
 		}
 	}
@@ -3782,11 +4062,11 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			navy_experience = 50
+			navy_experience = 25
 			add_doctrine_cost_reduction = {
 				name = USA_floating_airfields
 				cost_reduction = 0.75
-				uses = 2
+				uses = 1
 				category = cat_base_strike
 			}
 			swap_ideas = {

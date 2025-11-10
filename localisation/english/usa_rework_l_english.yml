@@ -35,6 +35,38 @@
  USA_war_plan_indigo:0 "War Plan Indigo"
  USA_war_plan_indigo_desc:0 "War Plan Indigo"
 
+ # FOCUS / AIR
+ USA_tactics:0 "Tactics"
+ USA_tactics_desc:0 "Tactics"
+ USA_agility:0 "Agility"
+ USA_agility_desc:0 "Agility"
+ USA_naca_langley_research_center:0 "NACA Langley Research Center"
+ USA_naca_langley_research_center_desc:0 "NACA is like early NASA I think..."
+ USA_american_british_conference:0 "American-British Conference"
+ USA_american_british_conference_desc:0 "American-British Conference"
+ USA_flying_fortresses:0 "Flying Fortresses"
+ USA_flying_fortresses_desc:0 "Flying Fortresses"
+ USA_overcome:0 "Overcome"
+ USA_overcome_desc:0 "Overcome"
+ USA_outmaneuver:0 "Outmaneuver"
+ USA_outmaneuver_desc:0 "Outmaneuver"
+ USA_doctrine_advancements:0 "Doctrine Advancements"
+ USA_doctrine_advancements_desc:0 "Doctrine Advancements"
+ USA_ocean_bombers:0 "Ocean Bombers"
+ USA_ocean_bombers_desc:0 "Ocean Bombers"
+ USA_the_hoverfly:0 "The Hoverfly"
+ USA_the_hoverfly_desc:0 "The Hoverfly"
+ USA_the_american_aircraft_industry:0 "The American Aircraft Industry"
+ USA_the_american_aircraft_industry_desc:0 "The American Aircraft Industry"
+ USA_rockets:0 "Rocketry"
+ USA_rockets_desc:0 "Rocketry"
+ USA_mors_ab_alto:0 "§tMors Ab Alto§!"
+ USA_mors_ab_alto_desc:0 "Mors Ab Alto - Death From Above. Motto of 7th bomb wing."
+ USA_in_alis_vincimus:0 "§tIn Alis Vincimus§!"
+ USA_in_alis_vincimus_desc:0 "In Alis Vincimus - On Wings We Conquer. Motto of the 19th Airlift Wing."
+
+
+
  # FOCUS /  NAVY STUFF
  USA_mass_production:0 "Mass production"
  USA_mass_production_desc:0 "Mass production"
