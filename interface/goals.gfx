@@ -3,8 +3,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_USA_rules_the_waves"
 		texturefile = "gfx/interface/goals/focus-usa-america-rules-the-waves.dds"			
-	}	
+	}
 
+	SpriteType = {
+		name = "GFX_focus_USA_mors_ab_alto"
+		texturefile = "gfx/interface/goals/focus-usa-mors-ab-alto.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_in_alis_vincimus"
+		texturefile = "gfx/interface/goals/focus-usa-in-alis-vincimus.dds"			
+	}
 
 
 
