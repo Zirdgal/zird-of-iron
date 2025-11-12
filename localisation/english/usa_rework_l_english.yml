@@ -123,6 +123,29 @@
  USA_focus_on_europe_idea_desc:0 "Focus on Europe"
 
 
+ # IDEAS / AIR
+ USA_air_force:0 "US Air Force"
+ USA_air_force_desc:0 "US Air Force"
+ USA_air_force_medium_1:0 "US Air Force - Medium Plane Primacy"
+ USA_air_force_medium_1_desc:0 "US Air Force - Medium Plane Primacy"
+ USA_air_force_medium_2:0 "US Air Force - Medium Plane Primacy"
+ USA_air_force_medium_2_desc:0 "US Air Force - Medium Plane Primacy"
+ USA_air_force_medium_3:0 "US Air Force - Medium Plane Primacy"
+ USA_air_force_medium_3_desc:0 "US Air Force - Medium Plane Primacy"
+ USA_air_force_small_1:0 "US Air Force - Small Plane Primacy"
+ USA_air_force_small_1_desc:0 "US Air Force - Small Plane Primacy"
+ USA_air_force_small_2:0 "US Air Force - Small Plane Primacy"
+ USA_air_force_small_2_desc:0 "US Air Force - Small Plane Primacy"
+ USA_air_force_small_3:0 "US Air Force - Small Plane Primacy"
+ USA_air_force_small_3_desc:0 "US Air Force - Small Plane Primacy"
+ USA_doctrine_advancements:0 "Air Doctrine Advancement"
+ USA_doctrine_advancements_desc:0 "Air Doctrine Advancement"
+ USA_american_air_industry:0 "American Aircraft Industry"
+ USA_american_air_industry_desc:0 "American Aircraft Industry"
+
+
+
+
  # IDEAS / NAVY
  USA_america_rules_the_waves_idea:0 "America Rules the Waves!"
  USA_america_rules_the_waves_idea_desc:0 "America Rules the Waves!"
