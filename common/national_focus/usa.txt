@@ -2080,8 +2080,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_war_plan_crimson
-		icon = GFX_focus_attack_canada
+		id = USA_tighten_control_over_the_islands
+		icon = GFX_SOV_the_lonely_island_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
 		prerequisite = { focus = USA_black_chamber }
@@ -2111,11 +2111,11 @@ focus_tree = {
 		completion_reward = {
 			every_state = { 
 				limit = {
-					is_core_of = CAN
+					is_core_of = PHI
 				}
 				add_core_of = USA
 			}
-			annex_country = { target = CAN transfer_troops = yes }
+			annex_country = { target = PHI transfer_troops = yes }
 		}
 	}
 	focus = {
@@ -4025,7 +4025,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_special_project_completed = f:sp_naval_cruiser_submarine
+			is_special_project_completed = sp:sp_naval_cruiser_submarine
 		}
 		
 		cancel_if_invalid = yes
