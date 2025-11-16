@@ -2081,7 +2081,7 @@
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_reform_the_labour_laws
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2444,11 +2444,6 @@
 					YUG = { is_guaranteed_by = ROOT }
 				}
 				ROOT = {
-					diplomatic_relation = {
-   						country = YUG
-   						relation = guarantee
-   						active = no
-  					}
   					add_ai_strategy = {
 						type = ignore
 						id = "YUG"

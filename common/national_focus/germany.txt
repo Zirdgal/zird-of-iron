@@ -10290,7 +10290,8 @@ focus_tree = {
 	focus = {
 		id = GER_alliance_with_spain
 		icon = GFX_focus_intervention_spain_nationalists
-		prerequisite = { focus = GER_form_rome_berlin_axis focus = GER_legion_condor }
+		prerequisite = { focus = GER_form_rome_berlin_axis}
+		prerequisite = {focus = GER_legion_condor}
 		x = 1
 		y = 1
 		relative_position_id = GER_form_rome_berlin_axis
