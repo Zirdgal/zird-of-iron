@@ -1,0 +1,1127 @@
+focus_tree = {
+	id = romanian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ROM
+			#always = no
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+#	focus = {
+#		id = ROM_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	} 
+
+	############## POLITICAL TREE #################
+	###############################################
+	###############################################
+
+	focus = {
+		id = ROM_Flawed_Democracy
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		x = 20
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+		focus = {
+		id = ROM_Tatarescu_Regime
+		prerequisite = {focus = ROM_Flawed_Democracy}
+		relative_position_id = ROM_Flawed_Democracy
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_military_dictatorship
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Finalize_Tax_Reforms
+		prerequisite = {focus = ROM_Tatarescu_Regime}
+		relative_position_id = ROM_Tatarescu_Regime
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_RAJ_war_taxes
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = ROM_Enforce_Tariffs
+		prerequisite = {focus = ROM_Finalize_Tax_Reforms}
+		relative_position_id = ROM_Finalize_Tax_Reforms
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_monetary_union
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Privatize_State_Owned_Enterprises
+		prerequisite = {focus = ROM_Finalize_Tax_Reforms}
+		relative_position_id = ROM_Finalize_Tax_Reforms
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_industry_3
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = ROM_Public_Works_Program
+		prerequisite = {focus = ROM_Privatize_State_Owned_Enterprises}
+		prerequisite = {focus = ROM_Enforce_Tariffs}
+		relative_position_id = ROM_Privatize_State_Owned_Enterprises
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_consumer_goods
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = ROM_Public_Department_Buildings
+		prerequisite = {focus = ROM_Tatarescu_Regime}
+		relative_position_id = ROM_Tatarescu_Regime
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_AFG_establish_darulaman
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = ROM_Clamp_Down_On_Extremism
+		prerequisite = {focus = ROM_Public_Department_Buildings}
+		relative_position_id = ROM_Public_Department_Buildings
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_ETH_boots_on_the_shore
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Restrict_Freedom_Of_Press
+		prerequisite = {focus = ROM_Public_Department_Buildings}
+		relative_position_id = ROM_Public_Department_Buildings
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_continuous_restrict_freedom
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_General_Election
+		prerequisite = {focus = ROM_Clamp_Down_On_Extremism focus = ROM_Restrict_Freedom_Of_Press}
+		relative_position_id = ROM_Clamp_Down_On_Extremism
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_election
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+			focus = {
+		id = ROM_Dissolve_Parliament
+		prerequisite = {focus = ROM_General_Election}
+		relative_position_id = ROM_General_Election
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Enforce_Royal_Dictatorship
+		prerequisite = {focus = ROM_Dissolve_Parliament}
+		relative_position_id = ROM_Dissolve_Parliament
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Constitutional_Reform
+		prerequisite = {focus = ROM_Enforce_Royal_Dictatorship}
+		relative_position_id = ROM_Enforce_Royal_Dictatorship
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_PER_constitutional_monarchy
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Preservation_Greater_Romania
+		prerequisite = {focus = ROM_Enforce_Royal_Dictatorship}
+		relative_position_id = ROM_Enforce_Royal_Dictatorship
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_rom_preserve_romania
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Build_The_Carol_Line
+		prerequisite = {focus = ROM_Preservation_Greater_Romania}
+		relative_position_id = ROM_Preservation_Greater_Romania
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_BEL_koningshooikt_wavre_line
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_German_Trade_Agreement
+		prerequisite = {focus = ROM_Preservation_Greater_Romania}
+		prerequisite = {focus = ROM_Constitutional_Reform}
+		relative_position_id = ROM_Preservation_Greater_Romania
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_chi_mission_to_germany
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_German_Four_Year_Plan
+		prerequisite = {focus = ROM_German_Trade_Agreement}
+		relative_position_id = ROM_German_Trade_Agreement	
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_SOV_fourth_five_year_plan_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Invite_German_Military_Advisors
+		prerequisite = {focus = ROM_German_Trade_Agreement}
+		relative_position_id = ROM_German_Trade_Agreement	
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_military_mission
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Royal_Guard
+		prerequisite = {focus = ROM_German_Trade_Agreement}
+		relative_position_id = ROM_German_Trade_Agreement	
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Anti_Communist_Measures
+		prerequisite = {focus = ROM_German_Four_Year_Plan}
+		relative_position_id = ROM_German_Four_Year_Plan	
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_GER_end_european_communism
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Strengthen_The_Sentinals
+		prerequisite = {focus = ROM_German_Four_Year_Plan}
+		relative_position_id = ROM_German_Four_Year_Plan	
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+	
+		focus = {
+		id = ROM_Axis_Membership
+		prerequisite = {focus = ROM_Strengthen_The_Sentinals}
+		prerequisite = {focus = ROM_Anti_Communist_Measures}
+		relative_position_id = ROM_Strengthen_The_Sentinals
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_fascist_propaganda
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Fortify_Danube
+		prerequisite = {focus = ROM_Axis_Membership}
+		relative_position_id = ROM_Axis_Membership
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Constanta_Naval_Line
+		prerequisite = {focus = ROM_Axis_Membership}
+		relative_position_id = ROM_Axis_Membership
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_black_sea_focus
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Take_West_Banat
+		prerequisite = {focus = ROM_Axis_Membership}
+		relative_position_id = ROM_Axis_Membership
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_attack_yugoslavia
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_D_Day_Line
+		prerequisite = {focus = ROM_Axis_Membership}
+		relative_position_id = ROM_Axis_Membership
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_coastal_fort
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Ukraine_Claim
+		prerequisite = {focus = ROM_Fortify_Danube}
+		prerequisite = {focus = ROM_Constanta_Naval_Line}
+		relative_position_id = ROM_Fortify_Danube
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_HUN_the_kingdom_of_ukraine
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Operation_Barbarossa
+		prerequisite = {focus = ROM_Ukraine_Claim}
+		relative_position_id = ROM_Ukraine_Claim
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_attack_soviet
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+		focus = {
+		id = ROM_Form_Greater_Romania
+		prerequisite = {focus = ROM_Operation_Barbarossa}
+		relative_position_id = ROM_Operation_Barbarossa
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_rom_preserve_romania
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+			
+		completion_reward = {
+
+		}
+	}
+
+	####### INDUSTRY TREE ##############
+##############################################
+###############################################
+
+		focus = {
+		id = ROM_Industrial_Investments
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_road_investment
+		x = 30
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Raw_Resource_Exploitation
+		prerequisite = {focus = ROM_Industrial_Investments}
+		relative_position_id = ROM_Industrial_Investments
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_resource_extraction
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Romanian_Timber_Industry
+		prerequisite = {focus = ROM_Raw_Resource_Exploitation}
+		relative_position_id = ROM_Raw_Resource_Exploitation
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_CHL_expand_the_forestry
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Strei_River_Hydroelectric
+		prerequisite = {focus = ROM_Romanian_Timber_Industry}
+		relative_position_id = ROM_Romanian_Timber_Industry
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_BEL_dam_the_consequences
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Increase_Mining_Efforts
+		prerequisite = {focus = ROM_Raw_Resource_Exploitation}
+		relative_position_id = ROM_Raw_Resource_Exploitation
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Gold_Mining
+		prerequisite = {focus = ROM_Increase_Mining_Efforts}
+		relative_position_id = ROM_Increase_Mining_Efforts
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_CONGO_gold_and_diamonds
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Coal_Mining
+		prerequisite = {focus = ROM_Increase_Mining_Efforts}
+		relative_position_id = ROM_Increase_Mining_Efforts
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_coal_mining
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Expand_Oil_Fields
+		prerequisite = {focus = ROM_Gold_Mining}
+		prerequisite = {focus = ROM_Coal_Mining}
+		relative_position_id = ROM_Coal_Mining
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_PER_increase_oil_sales
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Industrial_Revitalization_Program
+		prerequisite = {focus = ROM_Industrial_Investments}
+		relative_position_id = ROM_Industrial_Investments
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x = 4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Improve_Rural_Roads
+		prerequisite = {focus = ROM_Industrial_Revitalization_Program}
+		relative_position_id = ROM_Industrial_Revitalization_Program
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_improve_roads
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Industrial_Combine
+		prerequisite = {focus = ROM_Industrial_Revitalization_Program}
+		relative_position_id = ROM_Industrial_Revitalization_Program
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Derrick_Upgrades
+		prerequisite = {focus = ROM_Industrial_Revitalization_Program}
+		relative_position_id = ROM_Industrial_Revitalization_Program
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_oil_refinery
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Ford_Bucuresti
+		prerequisite = {focus = ROM_Industrial_Combine}
+		relative_position_id = ROM_Industrial_Combine
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_SWE_lynx_armored_car
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Atelierele_Leonida
+		prerequisite = {focus = ROM_Industrial_Combine}
+		relative_position_id = ROM_Industrial_Combine
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_tank_production
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Malaxa_Bucuresti
+		prerequisite = {focus = ROM_Industrial_Combine}
+		relative_position_id = ROM_Industrial_Combine
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_railroad
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Expand_University_Of_Bucharest
+		prerequisite = {focus = ROM_Atelierele_Leonida}
+		prerequisite = {focus = ROM_Ford_Bucuresti}
+		prerequisite = {focus = ROM_Malaxa_Bucuresti}
+		relative_position_id = ROM_Atelierele_Leonida
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+
+	##### MILITARY BRANCH #####
+########################################
+########################################
+
+	focus = {
+		id = ROM_Armed_Forces
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 50
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Land_Forces
+		prerequisite = {focus = ROM_Armed_Forces}
+		relative_position_id = ROM_Armed_Forces
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_army_doctrines_2
+		x = -5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Air_Force
+		prerequisite = {focus = ROM_Armed_Forces}
+		relative_position_id = ROM_Armed_Forces
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = ROM_Naval_Forces
+		prerequisite = {focus = ROM_Armed_Forces}
+		relative_position_id = ROM_Armed_Forces
+		available = {
+		
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_goal_generic_build_navy
+		x = 5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+		}
+	}
+}
