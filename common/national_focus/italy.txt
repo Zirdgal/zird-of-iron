@@ -4388,7 +4388,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_focus_on_mobilization
-		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_fascist_troops
 		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_a_bandits_war }
 
 		x = 5
@@ -4396,9 +4396,6 @@ focus_tree = {
 		relative_position_id = ITA_preserve_army_traditions
 		cost = 5
 		available = {
-			any_enemy_country = {
-				is_major_not_original_tag_root = yes
-			}
 		}
 
 		search_filters = {FOCUS_FILTER_ARMY_XP}
@@ -8622,6 +8619,11 @@ focus_tree = {
 
 		cost = 5
 		available = {
+
+			NOT = {
+				is_ai = true
+			}
+			
 			is_at_peace_exiled_countries_excluded = yes
 			power_balance_value = {
 				id = ITA_power_balance
