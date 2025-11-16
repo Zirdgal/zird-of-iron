@@ -45,7 +45,7 @@ focus_tree = {
 	focus = {
 		id = ITA_annex_bulgaria
 		icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
-		x = -5
+		x = 1
 		y = 0
 		cost = 0
 
@@ -102,6 +102,8 @@ focus_tree = {
 	focus = {
 		id = ITA_ethiopian_war_logistics_bba
 		icon = GFX_goal_generic_position_armies
+
+		relative_position_id = ITA_annex_bulgaria
 
 		x = 2
 		y = 0
@@ -3799,7 +3801,7 @@ focus_tree = {
 		id = ITA_army_primacy_bba
 		icon = GFX_goal_generic_axis_build_infantry
 
-		x = 13
+		x = 14
 		y = 0
 		relative_position_id = ITA_italian_highways_bba
 		cost = 5
@@ -3908,7 +3910,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = ITA_army_primacy_bba }
 		mutually_exclusive = { focus = ITA_a_bandits_war }
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = ITA_army_primacy_bba
 		cost = 10
@@ -4175,7 +4177,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = ITA_army_primacy_bba }
 		mutually_exclusive = { focus = ITA_preserve_army_traditions }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = ITA_army_primacy_bba
 		cost = 10
@@ -4384,13 +4386,34 @@ focus_tree = {
 			ITA_improve_regio_esercito_dm_effect = yes
 		}
 	}
+	focus = {
+		id = ITA_focus_on_mobilization
+		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_a_bandits_war }
+
+		x = 5
+		y = 1
+		relative_position_id = ITA_preserve_army_traditions
+		cost = 5
+		available = {
+			any_enemy_country = {
+				is_major_not_original_tag_root = yes
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_ARMY_XP}
+
+		completion_reward = {
+			add_ideas = ITA_focus_on_mobilization_idea
+		}
+	}
 
 	focus = {
 		id = ITA_italian_tankettes
 		icon = GFX_focus_generic_tankette
 		prerequisite = { focus = ITA_preserve_army_traditions focus = ITA_a_bandits_war }
 
-		x = 5
+		x = 7
 		y = 1
 		relative_position_id = ITA_preserve_army_traditions
 		cost = 10
@@ -4677,7 +4700,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_superesercito }
 		prerequisite = { focus = ITA_italian_tankettes }
 
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = ITA_superesercito
 		cost = 10
@@ -4982,9 +5005,9 @@ focus_tree = {
 		id = ITA_air_innovations_bba
 		icon = GFX_goal_expand_the_luftwaffe
 
-		x = 7
-		y = 0
-		relative_position_id = ITA_army_primacy_bba
+		x = 5
+		y = -1
+		relative_position_id = ITA_a_bandits_war
 		cost = 5
 		available = {
 		}
