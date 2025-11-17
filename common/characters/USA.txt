@@ -224,7 +224,7 @@ characters={
 			}
 
 			traits = {
-				land_warfare_theorist
+				superior_firepower_expert
 			}
 		}
 
