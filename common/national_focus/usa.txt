@@ -2182,7 +2182,15 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 10
+
 			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = omar_bradley
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = george_marshall_2
 
@@ -2377,6 +2385,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = dwight_eisenhower_2
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = courtney_hodges
 
@@ -2440,8 +2453,9 @@ focus_tree = {
 					uses = 1
 					category = special_forces_doctrine
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-
+			
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 1
@@ -2614,6 +2628,8 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_ideas = { USA_doctrine_advancements_army_idea }
 		}

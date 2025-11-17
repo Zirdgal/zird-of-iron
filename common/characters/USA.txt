@@ -214,12 +214,17 @@ characters={
 			slot = theorist
 			idea_token = omar_bradley
 			ledger = army
+
+			available = {
+				has_completed_focus = USA_false_thunder
+			}
+
 			allowed = {
 				original_tag = USA
 			}
 
 			traits = {
-				superior_firepower_expert
+				land_warfare_theorist
 			}
 		}
 
@@ -266,7 +271,32 @@ characters={
 				factor = 1.000
 			}
 		}
-
+		advisor = {
+			slot = theorist
+			idea_token = dwight_eisenhower_2
+			allowed = {
+				OR = {
+					original_tag = USA
+					is_literally_china = yes
+				}
+			}
+			available = {
+				AND = {
+					NOT = {
+						has_country_flag = dwight_d_eisenhower_sent_to_china
+					}
+					has_completed_focus = USA_first_special_service_force
+				}
+				
+			}
+			traits = {
+				grand_battle_plan_expert
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 		field_marshal={
 			traits={ trait_cautious armor_officer politically_connected organizer logistics_wizard offensive_doctrine }
 			skill=5
