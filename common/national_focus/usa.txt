@@ -2637,7 +2637,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_broad_front
-		icon = GFX_goal_unknown
+		icon = GFX_focus_USA_grand_assault
 		x = 0
 		y = 2
 		mutually_exclusive = { focus = USA_lightning_war focus = USA_shock_and_awe }
@@ -2673,7 +2673,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_shock_and_awe
-		icon = GFX_goal_unknown
+		icon = GFX_focus_USA_shock_and_awe
 		x = 0
 		y = 2
 		mutually_exclusive = { focus = USA_lightning_war focus = USA_broad_front }
@@ -2709,7 +2709,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_lightning_war
-		icon = GFX_goal_unknown
+		icon = GFX_focus_USA_lightning_war
 		x = 0
 		y = 2
 		mutually_exclusive = { focus = USA_shock_and_awe focus = USA_broad_front }

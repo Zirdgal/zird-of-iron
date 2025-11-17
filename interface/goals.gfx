@@ -1,9 +1,25 @@
 spriteTypes = {	
 
+
+	SpriteType = {
+		name = "GFX_focus_USA_grand_assault"
+		texturefile = "gfx/interface/goals/focus-usa-grand-assault.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_shock_and_awe"
+		texturefile = "gfx/interface/goals/focus-usa-shock-and-awe.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_USA_lightning_war"
+		texturefile = "gfx/interface/goals/focus-usa-lightning-war.dds"			
+	}
+
+
 	SpriteType = {
 		name = "GFX_focus_USA_rules_the_waves"
 		texturefile = "gfx/interface/goals/focus-usa-america-rules-the-waves.dds"			
 	}
+
 
 	SpriteType = {
 		name = "GFX_focus_USA_mors_ab_alto"
