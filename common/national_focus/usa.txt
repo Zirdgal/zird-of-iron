@@ -1579,8 +1579,13 @@ focus_tree = {
 
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = walter_krueger
+
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = USA_army_of_the_united_states
+			
+			swap_ideas = {
+				remove_idea = USA_the_army
+				add_idea = USA_the_army_2
+			}
 		}
 	}
 	
@@ -1691,7 +1696,7 @@ focus_tree = {
 		prerequisite = { focus = USA_louisiana_maneuvers }
 		mutually_exclusive = { focus = USA_overwhelming_firepower focus = USA_grand_battleplan }
 		relative_position_id = USA_selective_training_act
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -1711,11 +1716,20 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 15
+
 			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
 				category = cat_mobile_warfare
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				remove_idea = USA_the_army_2
+				add_idea = USA_the_army_tank
 			}
 		}
 	}
@@ -1729,7 +1743,7 @@ focus_tree = {
 		prerequisite = { focus = USA_louisiana_maneuvers }
 		mutually_exclusive = { focus = USA_armored_warfare focus = USA_grand_battleplan }
 		relative_position_id = USA_selective_training_act
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -1767,7 +1781,7 @@ focus_tree = {
 		prerequisite = { focus = USA_louisiana_maneuvers }
 		mutually_exclusive = { focus = USA_armored_warfare focus = USA_overwhelming_firepower }
 		relative_position_id = USA_selective_training_act
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 1
@@ -1967,8 +1981,11 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				remove_idea = USA_the_army_tank
+				add_idea = USA_the_army_tank_2
+			}
 		}
 	}
 
@@ -2003,6 +2020,12 @@ focus_tree = {
 				bonus = 0.75
 				uses = 2
 				category = mio_cat_tech_heavy_armor_and_modules
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				remove_idea = USA_the_army_tank_2
+				add_idea = USA_the_army_tank_3
 			}
 		}
 	}
@@ -2111,6 +2134,12 @@ focus_tree = {
 				bonus = 0.8
 				uses = 1
 				category = artillery
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				remove_idea = USA_the_army_tank_3
+				add_idea = USA_the_army_tank_4
 			}
 		}
 	}
@@ -2546,7 +2575,7 @@ focus_tree = {
 		prerequisite = { focus = USA_central_planning }
 		prerequisite = { focus = USA_army_doctrine_advancements }
 		relative_position_id = USA_central_planning
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2579,7 +2608,7 @@ focus_tree = {
 		prerequisite = { focus = USA_army_doctrine_advancements }
 		prerequisite = { focus = USA_motorized_carriages }
 		relative_position_id = USA_more_shells
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2611,7 +2640,7 @@ focus_tree = {
 		prerequisite = { focus = USA_motorized_carriages }
 		prerequisite = { focus = USA_bigger_cannons }
 		relative_position_id = USA_bigger_cannons
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2630,7 +2659,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = USA_the_army_tank_4
+				add_idea = USA_the_army_tank_5
+			}
 		}
 	}
 
