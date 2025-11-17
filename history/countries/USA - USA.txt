@@ -185,6 +185,7 @@ set_popularities = {
 add_ideas = {
 	undisturbed_isolation
 	great_depression
+	USA_the_army
 	home_of_the_free
 	disarmed_nation
 	free_trade
