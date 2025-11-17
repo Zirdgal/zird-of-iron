@@ -1769,6 +1769,12 @@ focus_tree = {
 				uses = 1
 				category = cat_superior_firepower
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				remove_idea = USA_the_army_2
+				add_idea = USA_the_army_firepower
+			}
 		}
 	}
 
@@ -1806,6 +1812,12 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = cat_grand_battle_plan
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				remove_idea = USA_the_army_2
+				add_idea = USA_the_army_battleplan
 			}
 		}
 	}
@@ -2129,7 +2141,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				bonus = 0.8
 				uses = 1
@@ -2174,6 +2185,13 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = george_marshall_2
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			swap_ideas = {
+				remove_idea = USA_the_army_firepower
+				add_idea = USA_the_army_firepower_2
+			}
 		}
 	}
 
@@ -2248,7 +2266,7 @@ focus_tree = {
 				uses = 2
 				category = artillery
 			}
-
+			
 			
 		}
 	}
@@ -2291,6 +2309,11 @@ focus_tree = {
 				USA_leslie_mcnair = {
 					add_trait = { trait = bearer_of_artillery }
 				}
+
+			}
+			swap_ideas = {
+				remove_idea = USA_the_army_firepower_2
+				add_idea = USA_the_army_firepower_3
 			}
 		}
 	}
@@ -2322,7 +2345,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = USA_the_army_firepower_3
+				add_idea = USA_the_army_firepower_4
+			}
 		}
 	}
 
@@ -2354,6 +2386,11 @@ focus_tree = {
 				bonus = 0.75
 				uses = 1
 				category = cat_special_forces_generic 
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = USA_the_army_battleplan
+				add_idea = USA_the_army_battleplan_2
 			}
 		}
 	}
@@ -2452,6 +2489,11 @@ focus_tree = {
 				uses = 3
 				category = support_tech 
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = USA_the_army_battleplan_2
+				add_idea = USA_the_army_battleplan_3
+			}
 		}
 	}
 
@@ -2482,7 +2524,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cat_special_forces_generic 
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = USA_the_army_battleplan_3
+				add_idea = USA_the_army_battleplan_4
+			}
 		}
 	}
 
@@ -2521,6 +2572,8 @@ focus_tree = {
 				uses = 1
 				category = motorized_equipment
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = { USA_motorized_carriages_idea }
 		}
 	}
 
@@ -2562,7 +2615,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 
-			# add idea for land doctrine
+			add_ideas = { USA_doctrine_advancements_army_idea }
 		}
 	}
 
@@ -2594,7 +2647,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = USA_the_army_battleplan_4
+				add_idea = USA_the_army_battleplan_5
+			}
 		}
 	}
 
@@ -2627,7 +2684,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = USA_the_army_firepower_4
+				add_idea = USA_the_army_firepower_5
+			}
 		}
 	}
 

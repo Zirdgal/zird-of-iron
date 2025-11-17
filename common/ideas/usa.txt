@@ -666,6 +666,446 @@ ideas = {
 			}
 		}
 
+		USA_the_army_firepower = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				army_artillery_attack_factor = 0.05
+				army_artillery_defence_factor = 0.025
+				breakthrough_factor = 0.05
+			}
+		}
+
+		USA_the_army_firepower_2 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				army_artillery_attack_factor = 0.15
+				army_artillery_defence_factor = 0.125
+				breakthrough_factor = 0.075
+
+				army_attack_factor = 0.025
+			}
+		}
+
+		USA_the_army_firepower_3 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				army_artillery_attack_factor = 0.15
+				army_artillery_defence_factor = 0.125
+				breakthrough_factor = 0.075
+
+				army_attack_factor = 0.025
+			}
+
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+				rocket_artillery = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+				anti_tank = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+				anti_air = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+			}
+		}
+		USA_the_army_firepower_4 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				army_artillery_attack_factor = 0.15
+				army_artillery_defence_factor = 0.125
+				breakthrough_factor = 0.075
+
+				army_attack_factor = 0.025
+			}
+
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+				rocket_artillery = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+				anti_tank = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+				anti_air = {
+					instant = yes
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		USA_the_army_firepower_5 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				army_artillery_attack_factor = 0.175
+				army_artillery_defence_factor = 0.15
+				breakthrough_factor = 0.125
+
+				army_attack_factor = 0.075
+			}
+
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					soft_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+				rocket_artillery = {
+					instant = yes
+					soft_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+				anti_tank = {
+					instant = yes
+					hard_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+				anti_air = {
+					instant = yes
+					air_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		USA_the_army_battleplan = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+				recon_factor = 0.05
+			}
+		}
+
+		USA_the_army_battleplan_2 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+				recon_factor = 0.05
+
+				special_forces_cap = 0.1
+				 
+				special_forces_training_time_factor = -0.05
+
+
+
+			}
+		}
+		USA_the_army_battleplan_3 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				max_planning_factor = 0.05
+				planning_speed = 0.05
+				recon_factor = 0.05
+
+				special_forces_cap = 0.1
+				 
+				special_forces_training_time_factor = -0.05
+
+				dig_in_speed_factor = 0.05
+				max_dig_in_factor = 0.1
+				supply_consumption_factor = -0.05
+
+			}
+		}
+
+		USA_the_army_battleplan_4 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population = -0.001
+				conscription_factor = -0.2
+				mobilization_speed = -0.2
+
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				max_planning_factor = 0.125
+				planning_speed = 0.125
+				recon_factor = 0.075
+
+				special_forces_cap = 0.15
+				 
+				special_forces_training_time_factor = -0.05
+
+				dig_in_speed_factor = 0.05
+				max_dig_in_factor = 0.1
+				supply_consumption_factor = -0.05
+
+			}
+		}
+		USA_the_army_battleplan_5 = {
+			picture = usa_department_of_defense
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+				experience_gain_factor = 0.1
+				experience_gain_army_unit_factor = 0.1
+
+				max_planning_factor = 0.15
+				planning_speed = 0.15
+				recon_factor = 0.1
+
+				special_forces_cap = 0.15
+				 
+				special_forces_training_time_factor = -0.05
+
+				dig_in_speed_factor = 0.05
+				max_dig_in_factor = 0.1
+				supply_consumption_factor = -0.05
+
+				breakthrough_factor = 0.1
+			}
+		}
+
+
+		USA_doctrine_advancements_army_idea = {
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				land_doctrine_cost_factor = -0.10
+			}
+		}
+
+		USA_motorized_carriages_idea = {
+			picture = generic_supply_line
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				mot_artillery_brigade = {
+					instant = yes
+					soft_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+				mot_rocket_artillery_brigade = {
+					instant = yes
+					soft_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+				mot_anti_tank_brigade = {
+					instant = yes
+					hard_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+				mot_anti_air_brigade = {
+					instant = yes
+					air_attack = 0.1
+					max_strength = 0.1
+					max_organisation = 0.1
+				}
+			}
+		}
+
 
 ############# WAR PLANS DIVISIONS #####################
 
