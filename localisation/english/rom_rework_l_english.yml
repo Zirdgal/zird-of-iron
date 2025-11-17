@@ -1,0 +1,130 @@
+﻿l_english:
+# FOCUS / POLITICAL PATH
+ROM_Flawed_Democracy:0 "A Flawed Democracy"
+ROM_Flawed_Democracy_desc:0 "A Flawed Democracy"
+ROM_Tatarescu_Regime:0 "Tatarescu's Regime"
+ROM_Tatarescu_Regime_desc:0 "Tatarescu's Regime"
+ROM_Finalize_Tax_Reforms:0 "Finalize the Tax Reforms"
+ROM_Finalize_Tax_Reforms_desc:0 "Finalize the Tax Reforms"
+ROM_Enforce_Tariffs:0 "Enforce the Tariffs"
+ROM_Enforce_Tariffs_desc:0 "Enforce the Tariffs"
+ROM_Privatize_State_Owned_Enterprises:0 "Privatize State Owned Enterprises"
+ROM_Privatize_State_Owned_Enterprises_desc:0 "Privatize State Owned Enterprises"
+ROM_Public_Works_Program:0 "Public Works Program"
+ROM_Public_Works_Program_desc:0 "Public Works Program"
+ROM_Public_Department_Buildings:0 "Public Department Buildings"
+ROM_Public_Department_Buildings_desc:0 "Public Department Buildings"
+ROM_Clamp_Down_On_Extremism:0 "Clamp Down on Extremism"
+ROM_Clamp_Down_On_Extremism_desc:0 "Clamp Down on Extremism"
+ROM_Restrict_Freedom_Of_Press:0 "Restrict the Freedom of the Press"
+ROM_Restrict_Freedom_Of_Press_desc:0 "Restrict the Freedom of the Press"
+ROM_General_Election:0 "The General Election"
+ROM_General_Election_desc:0 "The General Election"
+ROM_Dissolve_Parliament:0 "Dissolve the Parliament"
+ROM_Dissolve_Parliament_desc:0 "Dissolve the Parliament"
+ROM_Enforce_Royal_Dictatorship:0 "Enforce the Royal Dictatorship"
+ROM_Enforce_Royal_Dictatorship_desc:0 "Enforce the Royal Dictatorship"
+ROM_Preservation_Greater_Romania:0 "Preservation of Greater Romania"
+ROM_Preservation_Greater_Romania_desc:0 "Preservation of Greater Romania"
+ROM_Constitutional_Reform:0 "Constitutional Reform"
+ROM_Constitutional_Reform_desc:0 "Constitutional Reform"
+ROM_Build_The_Carol_Line:0 "Build the Carol Line"
+ROM_Build_The_Carol_Line_desc:0 "Build the Carol Line"
+ROM_German_Trade_Agreement:0 "German-Romanian Trade Agreement"
+ROM_German_Trade_Agreement_desc:0 "German-Romanian Trade Agreement"
+ROM_Invite_German_Military_Advisors:0 "Invite German Military Advisors"
+ROM_Invite_German_Military_Advisors_desc:0 "Invite German Military Advisors"
+ROM_German_Four_Year_Plan:0 "The German Four Year Plan"
+ROM_German_Four_Year_Plan_desc:0 "The German Four Year Plan"
+ROM_Royal_Guard:0 "The Royal Guard"
+ROM_Royal_Guard_desc:0 "The Royal Guard"
+ROM_Anti_Communist_Measures:0 "Anti-Communist Measures"
+ROM_Anti_Communist_Measures_desc:0 "Anti-Communist Measures"
+ROM_Strengthen_The_Sentinals:0 "Strengthen the Sentinals"
+ROM_Strengthen_The_Sentinals_desc:0 "Strengthen the Sentinals"
+ROM_Axis_Membership:0 "Axis Membership"
+ROM_Axis_Membership_desc:0 "Axis Membership"
+ROM_D_Day_Line:0 "Help the Atlantic Wall"
+ROM_D_Day_Line_desc:0 "Help the Atlantic Wall"
+ROM_Fortify_Danube:0 "Fortify the Danube"
+ROM_Fortify_Danube_desc:0 "Fortify the Danube"
+ROM_Constanta_Naval_Line:0 "The Constanta Naval Line"
+ROM_Constanta_Naval_Line_desc:0 "The Constanta Naval Line"
+ROM_Take_West_Banat:0 "The Banat Question"
+ROM_Take_West_Banat_desc:0 "The Banat Question"
+ROM_Ukraine_Claim:0 "Ukraina Românească"
+ROM_Ukraine_Claim_desc:0 "Ukraina Românească"
+ROM_Operation_Barbarossa:0 "Operation Barbarossa"
+ROM_Operation_Barbarossa_desc:0 "Operation Barbarossa"
+ROM_Form_Greater_Romania:0 "Proclaim Greater Romania"
+ROM_Form_Greater_Romania_desc:0 "Proclaim Greater Romania"
+
+# FOCUS / INDUSTRY TREE
+ROM_Industrial_Investments:0 "Industrial Investments"
+ROM_Industrial_Investments_desc:0 "Industrial Investments"
+ROM_Raw_Resource_Exploitation:0 "Raw Resource Exploitation"
+ROM_Raw_Resource_Exploitation_desc:0 "Raw Resource Exploitation"
+ROM_Romanian_Timber_Industry:0 "Romanian Timber Industry"
+ROM_Romanian_Timber_Industry_desc:0 "Romanian Timber Industry"
+ROM_Strei_River_Hydroelectric:0 "Strei River Hydroelectric"
+ROM_Strei_River_Hydroelectric_desc:0 "Strei River Hydroelectric"
+ROM_Increase_Mining_Efforts:0 "Increase Mining Efforts"
+ROM_Increase_Mining_Efforts_desc:0 "Increase Mining Efforts"
+ROM_Gold_Mining:0 "Gold Mining"
+ROM_Gold_Mining_desc:0 "Gold Mining"
+ROM_Coal_Mining:0 "Coal Mining"
+ROM_Coal_Mining_desc:0 "Coal Mining"
+ROM_Expand_Oil_Fields:0 "Expand the Oil Fields"
+ROM_Expand_Oil_Fields_desc:0 "Expand the Oil Fields"
+ROM_Industrial_Revitalization_Program:0 "Industrial Revitalization Program"
+ROM_Industrial_Revitalization_Program_desc:0 "Industrial Revitalization Program"
+ROM_Derrick_Upgrades:0 "Derrick Upgrades"
+ROM_Derrick_Upgrades_desc:0 "Derrick Upgrades"
+ROM_Industrial_Combine:0 "The Industrial Combines"
+ROM_Industrial_Combine_desc:0 "The Industrial Combines"
+ROM_Improve_Rural_Roads:0 "Improve Rural Roads"
+ROM_Improve_Rural_Roads_desc:0 "Improve Rural Roads"
+ROM_Ford_Bucuresti:0 "Ford Bucuresti"
+ROM_Ford_Bucuresti_desc:0 "Ford Bucuresti"
+ROM_Atelierele_Leonida:0 "Atelierele Leonida"
+ROM_Atelierele_Leonida_desc:0 "Atelierele Leonida"
+ROM_Malaxa_Bucuresti:0 "Malaxa Bucuresti"
+ROM_Malaxa_Bucuresti_desc:0 "Malaxa Bucuresti"
+ROM_Expand_University_Of_Bucharest:0 "Expand the Romanian Academy"
+ROM_Expand_University_Of_Bucharest_desc:0 "Expand the Romanian Academy"
+
+
+# FOCUS/ARMED FORCES 
+ROM_Armed_Forces:0 "Romanian Armed Forces"
+ROM_Armed_Forces_desc:0 "Romanian Armed Forces"
+
+# FOCUS/LAND FORCES
+ROM_Land_Forces:0 "Romanian Land Forces"
+ROM_Land_Forces_desc:0 "Romanian Land Forces"
+
+
+# FOCUS/AIR FORCE
+ROM_Air_Force:0 "Romanian Air Force"
+ROM_Air_Force_desc:0 "Romanian Air Force"
+
+# FOCUS/NAVAL FORCE
+ROM_Naval_Forces:0 "Romanian Naval Forces"
+ROM_Naval_Forces_desc:0 "Romanian Naval Forces"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ideas
+
+
