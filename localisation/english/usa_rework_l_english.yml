@@ -29,6 +29,46 @@
  USA_coal_mines_inspections:0 "Coal Mine Inspections"
  USA_coal_mines_inspections_desc:0 "Coal Mine Inspections"
 
+ # FOCUS / US ARMY
+ USA_the_us_army:0 "The US Army"
+ USA_the_us_army_desc:0 "The US Army"
+ USA_armored_warfare:0 "Armored Warfare"
+ USA_armored_warfare_desc:0 "Armored Warfare"
+ USA_overwhelming_firepower:0 "Overwhelming Firepower"
+ USA_overwhelming_firepower_desc:0 "Overwhelming Firepower"
+ USA_grand_battleplan:0 "Grand Battleplan"
+ USA_grand_battleplan_desc:0 "Grand Battleplan"
+ USA_combined_arms_warfare:0 "Combined Arms Warfare"
+ USA_combined_arms_warfare_desc:0 "Combined Arms Warfare"
+ USA_heavier_armor:0 "Heavier Armour"
+ USA_heavier_armor_desc:0 "Heavier Armour"
+ USA_cavalry_of_the_future:0 "Cavalry of the Future"
+ USA_cavalry_of_the_future_desc:0 "Cavalry of the Future"
+ USA_bigger_cannons:0 "Bigger Cannons"
+ USA_bigger_cannons_desc:0 "Bigger Cannons"
+ USA_false_thunder:0 "False Thunder"
+ USA_false_thunder_desc:0 "False Thunder"
+ USA_larger_mortars:0 "Larger Mortars"
+ USA_larger_mortars_desc:0 "Larger Mortars"
+ USA_concentrated_fire_plans:0 "Concentrated Fire Plans"
+ USA_concentrated_fire_plans_desc:0 "Concentrated Fire Plans"
+ USA_more_shells:0 "More Shells"
+ USA_more_shells_desc:0 "More Shells"
+ USA_support_for_all:0 "Support for All"
+ USA_support_for_all_desc:0 "Support for All"
+ USA_central_planning:0 "Central Planning"
+ USA_motorized_carriages:0 "Motorized Carriages"
+ USA_motorized_carriages_desc:0 "Motorized Carriages"
+ USA_army_doctrine_advancements:0 "Doctrine Advancements"
+ USA_army_doctrine_advancements_desc:0 "Doctrine Advancements"
+ USA_lightning_war:0 "§7Lightning War§!"
+ USA_lightning_war_desc:0 "Lightning War"
+ USA_shock_and_awe:0 "§7Shock and Awe§!"
+ USA_shock_and_awe_desc:0 "Shock and Awe"
+ USA_broad_front:0 "§7Broad Front§!"
+ USA_broad_front_desc:0 "Broad Front"
+
+
 # FOCUS / WAR PLANS 
  USA_war_plan_violet:0 "War Plan Violet"
  USA_war_plan_violet_desc:0 "War Plan Violet"
@@ -68,8 +108,7 @@
  USA_in_alis_vincimus_desc:0 "In Alis Vincimus - On Wings We Conquer. Motto of the 19th Airlift Wing."
 
 
-
- # FOCUS /  NAVY STUFF
+ # FOCUS /  NAVY
  USA_mass_production:0 "Mass production"
  USA_mass_production_desc:0 "Mass production"
  USA_guardians_of_carriers:0 "Guardians of the Carriers"
@@ -92,6 +131,10 @@
  USA_trade_interdiction_desc:0 "Trade Interdiction"
  USA_america_rules_the_waves:0 "§3America Rules the Waves!§!"
  USA_america_rules_the_waves_desc:0 "§3e§!"
+
+
+
+
 
 
  # IDEAS / ECONOMY
