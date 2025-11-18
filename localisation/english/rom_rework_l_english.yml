@@ -126,5 +126,17 @@ ROM_Naval_Forces_desc:0 "Romanian Naval Forces"
 
 
 # ideas
-
-
+ROM_Flawed_Democracy_idea:0 "Flawed Democracy"
+ROM_Flawed_Democracy_idea_desc:0 "The Romanian political system is a flawed democracy. The government is elected, but the king retains significant power and influence over the government. The political system is also plagued by corruption and inefficiency."
+ROM_Flawed_Democracy_idea_1:0 "Political Instability"
+ROM_Flawed_Democracy_idea_1_desc:0 "The Romanian political system is unstable, with frequent changes in government and a lack of political consensus. This instability makes it difficult for the government to implement long-term policies and reforms."
+ROM_Tax_Reform_idea:0 "Tatarescu's Tax Reforms"
+ROM_Tax_Reform_idea_desc:0 "Tatarescu's tax reforms were a series of measures implemented by the Romanian government in the 1930s to modernize the country's tax system. The reforms included the introduction of a progressive income tax, the establishment of a value-added tax, and the creation of a new tax on luxury goods."
+ROM_Enforced_Tariffs_idea:0 "Enforce the Tariffs"
+ROM_Enforced_Tariffs_idea_desc:0 "The Romanian government has implemented tariffs on imported goods to protect domestic industries. However, these tariffs have been difficult to enforce, leading to widespread smuggling and corruption."
+ROM_Privatized_Industry_idea:0 "Privatized Industry"
+ROM_Privatized_Industry_idea_desc:0 "The Romanian government has privatized many state-owned enterprises, leading to increased efficiency and competitiveness. However, this process has also led to job losses and social unrest."
+ROM_Public_Works_idea_1:0 "Public Works Program"
+ROM_Public_Works_idea_1_desc:0 "Public Works Program"
+ROM_Public_Works_idea_2:0 "Public Works Program"
+ROM_Public_Works_idea_2_desc:0 "Public Works Program"

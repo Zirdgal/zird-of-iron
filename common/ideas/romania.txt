@@ -1,50 +1,98 @@
 ideas = {
 
 	country = {
-		ROM_revenge_against_soviet = {
+		ROM_Flawed_Democracy_idea = {
+			picture = generic_democratic_opposition
 
-			picture = anti_soviet_pact
-			
 			removal_cost = -1
-
 			allowed = {
 				original_tag = ROM
 			}
 
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
-			
 			modifier = {
-				fascism_drift = 0.1
-				fascism_acceptance = 100
+				political_power_cost = 0.3
+				communism_drift = -0.01
+				communism_acceptance = -10
+				fascism_drift = 0.01
+				fascism_acceptance = 10
+				neutrality_drift = 0.01
+				neutrality_acceptance = 10
 			}
 		}
-	
-		ROM_revenge_against_germany = {
-
-			picture = generic_communism_drift_bonus
-
-			removal_cost = -1
-			
+		ROM_Flawed_Democracy_idea_1 = {
+			picture = gre_political_instability
 			allowed = {
 				original_tag = ROM
 			}
 
-			allowed_civil_war = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-			
 			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 100
+				party_popularity_stability_factor = -0.10
+				political_power_cost = 0.15
+				war_stability_factor = 0.10
+				war_support_factor = 0.10
 			}
 		}
+		ROM_Tax_Reform_idea = {
+			picture = RAJ_taxes
+			allowed = {
+				original_tag = ROM
+			}
 
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+
+			}
+		}
+			ROM_Enforced_Tariffs_idea = {
+			picture = EST_exploit_the_banks
+			allowed = {
+				original_tag = ROM
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				opinion_gain_monthly_factor = -0.05
+				min_export = -0.50
+			}
+		}
+			ROM_Privatized_Industry_idea = {
+			picture = ARG_rapid_militarization
+			allowed = {
+				original_tag = ROM
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+			ROM_Public_Works_idea_1 = {
+			picture = ARG_public_works_investment
+			allowed = {
+				original_tag = ROM
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = 0.5 
+				production_speed_infrastructure_factor = 0.5
+			}
+		}
+			ROM_Public_Works_idea_2 = {
+			picture = ARG_public_works_investment
+			allowed = {
+				original_tag = ROM
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = 0.5 
+				production_speed_infrastructure_factor = 0.5
+			}
+		}
 		ROM_romanian_volunteer_brigades = {
 
 			picture = generic_volunteer_expedition_bonus
