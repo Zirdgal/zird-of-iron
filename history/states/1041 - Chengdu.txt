@@ -1,8 +1,8 @@
 state = {
-	id = 605
-	name = "STATE_605"
+	id = 1041
+	name = "STATE_1041"
 	resources = {
-		steel = 10
+		steel = 4
 	}
 
 	history = {
@@ -10,14 +10,19 @@ state = {
 		owner = CHI
 		add_core_of = CHI
 		add_core_of = PRC
-
-		victory_points = {
-			11865 1 # Wanxian
-		}
-
+		
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			4925 10 # Chengdu
+		}
+
+		victory_points = {
+			1367 1 # Guanghan
 		}
 
 		1936.1.1 = {
@@ -43,23 +48,21 @@ state = {
 		
 		1939.1.1 = {
 			buildings = {
-				industrial_complex = 1
+				industrial_complex = 2
 				infrastructure = 3
 				arms_factory = 1
-			}
 
+			}
 		}
 
 	}
 
 	provinces = {
-		1893 2030 2091 4041 4141 5048 7256 7948 10144 10304 10822 11865 12274  
+		1367 1395 4925 8026 10132 12141 12767 12819
 	}
-	manpower = 2724437
+	manpower = 5448874
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = town
 
 	local_supplies = 0.0 
 }
-
-

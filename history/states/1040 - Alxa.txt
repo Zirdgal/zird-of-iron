@@ -1,19 +1,19 @@
 state={
-	id=759
-	name="STATE_759"
+	id=1040
+	name="STATE_1040"
 	provinces={
-		1698 2074 4947 5736  
+		4783 7727 7803 8102 10770 10899
 	}
-	manpower=70000
+	manpower=450000
 	buildings_max_level_factor=1.000
 	state_category = wasteland
 	history={
 
-		owner = MON
-		add_core_of = MON
+		owner = CHI
+		add_core_of = CHI
 
 		victory_points = {
-			2074 1 # Ruoqiang 
+			4783 1 # Ejin Banner
 		}
 
 		buildings = {
@@ -22,5 +22,5 @@ state={
 
 	}
 
-	local_supplies=0.0 
+	local_supplies = 0.0 
 }
